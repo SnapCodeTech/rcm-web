@@ -11,8 +11,11 @@
 
 .heroContent {
     width: 540px;
-    padding-top: 8px;
     flex-shrink: 0;
+}
+
+.heroImageWrapper {
+    flex: 1;
 }
 
 .heroBadge {
@@ -92,13 +95,6 @@
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-}
-
-.heroImageWrapper {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
 }
 
 .heroImage {
