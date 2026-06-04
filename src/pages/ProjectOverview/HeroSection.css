@@ -1,7 +1,7 @@
 .heroSection {
     width: 100%;
     min-height: 760px;
-    background: #000000;
+    background: var(--background);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     height: 36px;
     padding: 0 14px;
     border-radius: 10px;
-    background: rgba(142, 92, 246, 0.12);
+    background: rgba(183, 148, 246, 0.12);
     border: 1px solid rgba(183, 148, 246, 0.25);
     display: flex;
     align-items: center;
@@ -35,18 +35,18 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #B794F6;
+    background: var(--primary);
 }
 
 .heroBadge span {
     font-size: 13px;
     font-weight: 500;
-    color: #D8C4FF;
+    color: var(--primary);
 }
 
 .heroTitle {
     margin: 0;
-    color: #F8F8FF;
+    color: var(--white);
     font-size: 64px;
     font-weight: 700;
     line-height: 1.08;
@@ -55,13 +55,13 @@
 }
 
 .heroTitle span {
-    color: #C7A2FF;
+    color: var(--primary);
 }
 
 .heroDescription {
     margin-top: 28px;
     width: 530px;
-    color: #B5B7C5;
+    color: var(--text-secondary);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.75;
@@ -78,20 +78,24 @@
     padding: 0 34px;
     border: none;
     border-radius: 10px;
-    background: #D4B6FF;
-    color: #39215F;
+    background: var(--primary);
+    color: var(--background);
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
+}
+
+.launchBtn:hover {
+    background: var(--primary-dark);
 }
 
 .docsBtn {
     height: 56px;
     padding: 0 34px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 1px solid var(--border);
     background: transparent;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;

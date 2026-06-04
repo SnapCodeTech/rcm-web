@@ -1,0 +1,210 @@
+.stagesSection {
+    width: 100%;
+    padding: 96px 0;
+    background: var(--background);
+}
+
+.stagesContainer {
+    width: 100%;
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 96px;
+}
+
+.stagesHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 592px;
+}
+
+.stagesTitle {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.stagesSubtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.stagesGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.stageCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 0px 4px 12px rgba(136, 136, 136, 0.15);
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.stageCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transform: translateX(-50%);
+    transition: width 0.35s ease;
+}
+
+.stageCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stageCard:hover::before {
+    width: 100%;
+}
+
+.stageCard.highlighted {
+    border-color: rgba(183, 148, 246, 0.25);
+    box-shadow: 0px 4px 20px rgba(183, 148, 246, 0.15);
+}
+
+.stageCard.highlighted::before {
+    width: 100%;
+}
+
+.stageCardInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.stageIconBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.stageIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    object-fit: contain;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.stageIcon svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    border-radius: 4px;
+}
+
+.stageCard:hover .stageIcon {
+    transform: scale(1.08);
+}
+
+.stageTitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--text-primary);
+    margin-top: 24px;
+}
+
+.stageDescription {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: 12px;
+}
+
+.stageConnector {
+    width: 100%;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: top center;
+}
+
+.stageCard:hover .stageConnector {
+    transform: translateY(6px) scaleY(1.25);
+}
+
+@media (max-width: 1100px) {
+    .stagesContainer {
+        padding: 0 24px;
+        gap: 72px;
+    }
+
+    .stagesGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stagesTitle {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stagesSection {
+        padding: 64px 0;
+    }
+
+    .stagesContainer {
+        gap: 48px;
+    }
+
+    .stagesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stagesTitle {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stagesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .stagesContainer {
+        padding: 0 16px;
+    }
+
+    .stageCard {
+        padding: 20px;
+    }
+}
