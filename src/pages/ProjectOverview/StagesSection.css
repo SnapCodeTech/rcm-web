@@ -105,6 +105,20 @@
     gap: 24px;
 }
 
+.stageIcon svg {
+    width: 48px;
+    height: 48px;
+    display: block;
+    transition: all 0.35s ease;
+}
+
+.stageIcon svg path,
+.stageIcon svg rect,
+.stageIcon svg circle,
+.stageIcon svg line {
+    transition: all 0.35s ease;
+}
+
 .stageIconBlock {
     display: flex;
     flex-direction: column;
@@ -122,11 +136,22 @@
         filter 0.35s ease;
 }
 
-.stageIcon svg {
-    width: 48px;
-    height: 48px;
-    display: block;
-    border-radius: 4px;
+.stageIcon {
+    color: var(--primary);
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+.stageCard:hover .stageIcon svg rect {
+    fill: var(--primary);
+}
+
+.stageCard:hover .stageIcon svg path,
+.stageCard:hover .stageIcon svg circle,
+.stageCard:hover .stageIcon svg line {
+    fill: #1F1147;
+    stroke: #1F1147;
 }
 
 .stageCard:hover .stageIcon {
