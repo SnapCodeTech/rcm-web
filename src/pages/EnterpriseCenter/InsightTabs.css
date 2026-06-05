@@ -1,0 +1,303 @@
+.insights-section {
+    background: var(--background, #050816);
+    padding: 80px 24px;
+    width: 100%;
+}
+
+.insights-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.stage-tab-card {
+    background: #181922;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.stage-tab-card:hover {
+    background: #1f212d;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.stage-tab-card.active {
+    background: #1e202c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tab-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    color: var(--stage-accent, var(--text-secondary));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 1.2rem;
+}
+
+.tab-title {
+    font-family: var(--sans, sans-serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary, #F8FAFC);
+    margin-bottom: 6px;
+}
+
+.tab-subtitle {
+    font-family: var(--sans, sans-serif);
+    font-size: 0.75rem;
+    color: var(--text-secondary, #94A3B8);
+    opacity: 0.7;
+}
+
+.hover-border-line {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: var(--stage-accent, #3b82f6);
+    border-radius: 2px;
+    opacity: 0;
+    transform: scaleX(0.8);
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stage-tab-card:hover .hover-border-line {
+    opacity: 0.5;
+    transform: scaleX(1);
+}
+
+.stage-tab-card.active .hover-border-line {
+    opacity: 1;
+    transform: scaleX(1);
+    box-shadow: 0 0 12px var(--stage-accent);
+}
+
+.insight-panel-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+    background: #11121a;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 48px;
+    min-height: 440px;
+}
+
+.flow-visual-frame {
+    background: #161722;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.diagram-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.diagram-node {
+    background: #1f2130;
+    border-radius: 8px;
+    padding: 16px 12px;
+    font-family: var(--mono, monospace);
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 115px;
+    height: 52px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.node-inner {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.node-purple {
+    border: 1px solid #c084fc;
+    color: #e9d5ff;
+}
+
+.node-cyan {
+    border: 1px solid #22d3ee;
+    color: #cffafe;
+}
+
+.node-blue {
+    border: 1px solid #3b82f6;
+    color: #dbeafe;
+}
+
+.node-magenta {
+    border: 1px solid #a855f7;
+    color: #f3e8ff;
+}
+
+.node-pink {
+    border: 1px solid #ec4899;
+    color: #fce7f3;
+}
+
+.split-nodes-block {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    padding: 0 10px;
+}
+
+.split-connector-top,
+.split-connector-bottom {
+    position: absolute;
+    left: -12px;
+    right: -12px;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.split-connector-top {
+    top: -16px;
+    bottom: 50%;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.split-connector-bottom {
+    top: 50%;
+    bottom: -16px;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.flow-arrow {
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    font-size: 1.1rem;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insight-info-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.insight-info-content h3 {
+    font-family: var(--sans, sans-serif);
+    font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+    font-weight: 700;
+    color: var(--white, #ffffff);
+    margin-bottom: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+.insight-body-text {
+    font-family: var(--sans, sans-serif);
+    font-size: 0.95rem;
+    color: var(--text-secondary, #94A3B8);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.checked-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checked-features-list li {
+    font-family: var(--sans, sans-serif);
+    font-size: 0.95rem;
+    color: var(--text-primary, #F8FAFC);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkmark-icon {
+    color: #10b981;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .stages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .insight-panel-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .stages-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .diagram-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .split-nodes-block {
+        gap: 16px;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .split-connector-top,
+    .split-connector-bottom {
+        display: none;
+    }
+}
