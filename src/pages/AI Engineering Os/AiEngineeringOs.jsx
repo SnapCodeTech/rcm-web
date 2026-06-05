@@ -1,40 +1,59 @@
 import Navbar from "../../components/NavBar/Navbar";
+import HeroSection from "./HeroSection";
+import RCMAI from '../../assets/images/AiEngineeringOs/RCM-AI.png';
 import "./AiEngineeringOs.css";
+import TrustedSection from "./TrustedSection";
+import UserIntelligenceSection from "./UserIntelligenceSection";
+import ProgressiveDeliverySection from "./ProgressiveDeliverySection";
+import NeuralObservabilitySection from "./NeuralObservabilitySection";
+import IncidentManagement from "./IncidentManagement";
+import ZeroTrustSecuritySection from "./ZeroTrustSecuritySection";
+import PlatformConsolidationSection from "./PlatformConsolidationSection";
+import EngineeringTeamsSection from "./EngineeringTeamsSection";
+import EngineeringMetricsSection from "./EngineeringMetricsSection";
+import TransparentPricingSection from "./TransparentPricingSection";
+import FinalCtaSection from "./FinalCtaSection";
+import Footer from "../../components/Footer/Footer";
+
 export default function AiEngineeringOs() {
  return (
     <div className="aios-container">
-      {/* Navbar */}
-      <Navbar />
 
-      {/* Page content */}
-      <div className="aios-content">
-        {/* Version badge */}
-        <span className="aios-badge">
-          v2.4 Now Live: AI-Driven Root Cause Analysis
-        </span>
+      {/* Hero Section */}
+      <HeroSection />
 
-        {/* Headline */}
-        <h1 className="aios-headline">
-          One AI Platform for Observability, Feature Flags, Analytics, Incidents, and Security
-        </h1>
-
-        {/* Description */}
-        <p className="aios-description">
-          Zelisy unifies your entire engineering stack into a single, high-performance
-          platform. Eliminate tool sprawl and gain real-time clarity from code to production.
-        </p>
-
-        {/* Buttons */}
-        <div className="aios-buttons">
-          <button className="btn-primary">Start Free Trial</button>
-          <button className="btn-secondary">Request Demo</button>
-        </div>
-
-        {/* Footer */}
-        <footer className="aios-footer">
-          © 2026 AI Engineering OS. All rights reserved.
-        </footer>
+      {/* RCM-AI Image */}
+      <div className="rcmAIImageWrapper">
+          <img
+            src={RCMAI}
+            alt="AI Platform"
+            className="RCMAI"
+          />
       </div>
+
+        {/* Trusted Section */}
+        <TrustedSection />
+        {/* UserIntelligenceSection  */}
+        <UserIntelligenceSection />
+        {/* Progressive Delivery Section */}
+        <ProgressiveDeliverySection />
+        {/* Neural Observability Section */}
+        <NeuralObservabilitySection />
+        {/* Incident Management Section */}
+        <IncidentManagement />
+        {/* Zero Trust Security Section */}
+        <ZeroTrustSecuritySection />
+        {/* Platform Consolidation Section */}
+        <PlatformConsolidationSection />
+        {/* Engineering Teams Section */}
+        <EngineeringTeamsSection />
+        {/* Engineering Metrics Section */}
+        <EngineeringMetricsSection />
+        {/* Transparent Pricing Section */}
+        <TransparentPricingSection />
+        {/* Final CTA Section */}
+        <FinalCtaSection />
+        
     </div>
   );
 }
