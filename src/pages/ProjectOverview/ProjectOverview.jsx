@@ -8,7 +8,7 @@ import PlatformArchitecture from "./PlatformArchitecture";
 export default function ProjectOverview() {
     return (
         <div>
-            <Navbar />
+            
             <div style={{ marginTop: '35px' }}>
                 <HeroSection />
             </div>
