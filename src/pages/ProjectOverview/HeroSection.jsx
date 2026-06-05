@@ -1,5 +1,6 @@
 import './HeroSection.css';
 import heroContainerImg from '../../assets/images/projectOverview/heroContainerImg.png';
+import heroIcon from '../../assets/images/projectOverview/img_icon.svg';
 
 const HeroSection = () => {
     return (
@@ -7,7 +8,12 @@ const HeroSection = () => {
             <div className="heroContent">
 
                 <div className="heroBadge">
-                    <div className="heroBadgeDot"></div>
+                    {/* <div className="heroBadgeDot"></div> */}
+                    <img
+                        src={heroIcon}
+                        alt="AI Platform"
+                        className="heroBadgeDot"
+                    />
                     <span>v2.4 Engine Now Live</span>
                 </div>
 
