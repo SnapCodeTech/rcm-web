@@ -1,0 +1,398 @@
+.buildMissionFooter {
+    width: 100%;
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.buildMissionInner {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.buildMissionRow {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+/* Left Column */
+.buildMissionLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 32%;
+    flex-shrink: 0;
+}
+
+.buildMissionTitle {
+    color: var(--text-primary);
+    font-family: 'Hanken Grotesk', var(--sans);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 56px;
+    text-align: left;
+    margin: 0;
+}
+
+.buildMissionDesc {
+    color: var(--text-secondary);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.buildMissionFeatures {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.buildMissionFeatureItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 16px;
+}
+
+.buildMissionFeatureText {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.buildMissionFeatureTitle {
+    color: var(--text-primary);
+    font-family: var(--sans);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+.buildMissionFeatureDesc {
+    color: var(--text-secondary);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Right Column */
+.buildMissionRight {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.buildMissionCardsRow {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+.buildMissionCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 372px;
+    background: var(--card-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    padding: 0 16px 16px 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.buildMissionCard:hover {
+    box-shadow: 0px 6px 16px rgba(136, 136, 136, 1);
+}
+
+.buildMissionCardCol {
+    flex-direction: column;
+}
+
+.buildMissionCardTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.buildMissionCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 32px;
+}
+
+.buildMissionCardLabel {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.buildMissionCardLabelBrand {
+    color: var(--primary);
+}
+
+.buildMissionCardLabelAccent {
+    color: var(--primary);
+}
+
+.buildMissionCardValue {
+    color: var(--text-primary);
+    font-family: 'Hanken Grotesk', var(--sans);
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    margin: 0;
+}
+
+.buildMissionCardSubtext {
+    color: var(--text-secondary);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 16px;
+}
+
+.buildMissionCardSubtextMt {
+    margin-top: 16px;
+}
+
+.buildMissionCardDecor {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-left: -2px;
+}
+
+/* Performance Card */
+.buildMissionPerfCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: var(--card-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 32px;
+    gap: 24px;
+    transition: box-shadow 0.3s ease;
+}
+
+.buildMissionPerfCard:hover {
+    box-shadow: 0px 6px 16px rgba(136, 136, 136, 1);
+}
+
+.buildMissionPerfLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.buildMissionPerfTitle {
+    color: var(--text-primary);
+    font-family: 'Hanken Grotesk', var(--sans);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
+}
+
+.buildMissionPerfDesc {
+    color: var(--text-secondary);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.buildMissionBars {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 12px;
+    height: 56px;
+}
+
+.buildMissionBar {
+    width: 8px;
+    border-radius: 2px;
+}
+
+.buildMissionBarPrimary {
+    background: var(--primary);
+}
+
+.buildMissionBarMedium {
+    background: rgba(139, 92, 246, 0.5);
+}
+
+.buildMissionBarStrong {
+    background: rgba(139, 92, 246, 0.7);
+}
+
+.buildMissionBarLight {
+    background: rgba(139, 92, 246, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .buildMissionRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .buildMissionLeft {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .buildMissionTitle {
+        font-size: 40px;
+        line-height: 49px;
+    }
+
+    .buildMissionFeatures {
+        gap: 20px;
+    }
+
+    .buildMissionRight {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .buildMissionCard {
+        width: 100%;
+    }
+
+    .buildMissionCardValue {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buildMissionInner {
+        padding: 0 16px;
+    }
+
+    .buildMissionTitle {
+        font-size: 35px;
+        line-height: 42px;
+    }
+
+    .buildMissionCardsRow {
+        flex-direction: column;
+    }
+
+    .buildMissionPerfCard {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .buildMissionPerfLeft {
+        width: 100%;
+    }
+
+    .buildMissionCardValue {
+        font-size: 35px;
+    }
+}
+
+/* Icon Button (replaces IconButton component) */
+.buildMissionIconBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    background: rgba(62, 236, 111, 0.2);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.buildMissionIconBtnImg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    object-fit: contain;
+}
+
+
+.buildMissionStatusBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: auto;
+    padding: 12px 34px 12px 22px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--background-secondary);
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.buildMissionStatusBtnIcon {
+    width: 12px;
+    height: 12px;
+    display: block;
+    object-fit: contain;
+}

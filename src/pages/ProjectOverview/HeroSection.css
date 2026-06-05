@@ -1,0 +1,149 @@
+.heroSection {
+    width: 100%;
+    min-height: 760px;
+    background: var(--background);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 64px 0;
+    overflow: hidden;
+}
+
+.heroContent {
+    width: 540px;
+    flex-shrink: 0;
+}
+
+.heroImageWrapper {
+    flex: 1;
+}
+
+.heroBadge {
+    width: fit-content;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: rgba(183, 148, 246, 0.12);
+    border: 1px solid rgba(183, 148, 246, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.heroBadgeDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.heroBadge span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.heroTitle {
+    margin: 0;
+    color: var(--white);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    text-align: left;
+}
+
+.heroTitle span {
+    color: var(--primary);
+}
+
+.heroDescription {
+    margin-top: 28px;
+    width: 530px;
+    color: var(--text-secondary);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 14px;
+    margin-top: 36px;
+}
+
+.launchBtn {
+    height: 56px;
+    padding: 0 34px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--background);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.launchBtn:hover {
+    background: var(--primary-dark);
+}
+
+.docsBtn {
+    height: 56px;
+    padding: 0 34px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.heroImage {
+    width: 100%;
+    max-width: 720px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .heroSection {
+        flex-direction: column;
+        padding: 40px 24px;
+    }
+
+    .heroContent {
+        width: 100%;
+    }
+
+    .heroDescription {
+        width: 100%;
+    }
+
+    .heroImageWrapper {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .heroImage {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+    }
+
+    .launchBtn,
+    .docsBtn {
+        width: 100%;
+    }
+}

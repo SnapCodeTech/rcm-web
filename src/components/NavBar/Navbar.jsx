@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -5,7 +6,7 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar-logo">RCM</div>
       <div className="navbar-links">
-        <a href="/overview">Product Overview</a>
+        <Link to="/overview">Product Overview</Link>
         <a href="/usecases">Use Cases</a>
         <a href="/enterprise">Enterprise Center</a>
         <a href="/pricing">Pricing</a>

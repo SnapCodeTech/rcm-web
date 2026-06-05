@@ -1,0 +1,141 @@
+.architecture-section {
+    background: var(--background, #050816);
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.architecture-title {
+    font-family: var(--sans, system-ui, sans-serif);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 600;
+    color: #e2e8f0;
+    opacity: 0.9;
+    text-align: center;
+    margin-bottom: 64px;
+    letter-spacing: -0.5px;
+}
+
+.architecture-stack {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* LAYER CARD HOUSINGS */
+.architecture-layer-card {
+    width: 100%;
+    background: #111420;
+    /* Matching the deep navy/black card profile */
+    border-radius: 12px;
+    padding: 32px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.layer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* TYPOGRAPHY */
+.layer-label {
+    font-family: var(--mono, monospace);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.layer-description {
+    font-family: var(--sans, system-ui, sans-serif);
+    color: #94a3b8;
+    /* var(--text-secondary) */
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+/* ICONS */
+.layer-icon svg {
+    width: 24px;
+    height: 24px;
+    opacity: 0.85;
+}
+
+/* COLOR SCHEMES PER LAYER */
+/* 1. Intelligence Layer (Purple theme) */
+.layer-intelligence {
+    border-left: 3px solid #b794f6;
+    /* Matching your purple branding */
+}
+
+.layer-intelligence .layer-label {
+    color: #c084fc;
+}
+
+.layer-intelligence .layer-icon {
+    color: #c084fc;
+}
+
+/* 2. Processing Layer (Cyan theme) */
+.layer-processing {
+    border-left: 3px solid #06b6d4;
+}
+
+.layer-processing .layer-label {
+    color: #22d3ee;
+}
+
+.layer-processing .layer-icon {
+    color: #22d3ee;
+}
+
+/* 3. Ingestion Layer (Green theme) */
+.layer-ingestion {
+    border-left: 3px solid #22c55e;
+}
+
+.layer-ingestion .layer-label {
+    color: #4ade80;
+}
+
+.layer-ingestion .layer-icon {
+    color: #4ade80;
+}
+
+/* VERTICAL CONNECTING LINERS */
+.layer-connector {
+    width: 2px;
+    height: 36px;
+    opacity: 0.4;
+}
+
+.connector-blue {
+    background: linear-gradient(to bottom, #c084fc, #22d3ee);
+}
+
+.connector-green {
+    background: linear-gradient(to bottom, #22d3ee, #4ade80);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 640px) {
+    .architecture-layer-card {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .layer-icon {
+        align-self: flex-end;
+    }
+}
