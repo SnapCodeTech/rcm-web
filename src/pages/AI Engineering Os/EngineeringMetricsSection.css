@@ -1,15 +1,14 @@
-/* Container Layout Setup */
 .metrics-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 30px 24px;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
   background-color: transparent;
 }
 
-/* Centralized Typography Section Title Header */
+/* Header */
 .metrics-header {
   text-align: center;
   max-width: 850px;
@@ -20,12 +19,12 @@
   font-size: 42px;
   font-weight: 600;
   line-height: 1.3;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin: 0;
   letter-spacing: -0.01em;
 }
 
-/* Master Metrics Flex Container Box */
+/* Display Box */
 .metrics-display-box {
   position: relative;
   width: 100%;
@@ -34,7 +33,7 @@
   align-items: center;
 }
 
-/* Horizontal Display Grid Row Layout */
+/* Row Layout */
 .metrics-row {
   display: flex;
   width: 100%;
@@ -44,7 +43,7 @@
   box-sizing: border-box;
 }
 
-/* Individual Stat Block Geometries */
+/* Stat Block */
 .metric-item {
   display: flex;
   flex-direction: column;
@@ -53,7 +52,6 @@
   flex: 1;
 }
 
-/* Big Display Numbers Custom Colors Styling */
 .metric-number {
   font-size: 54px;
   font-weight: 700;
@@ -63,35 +61,40 @@
 }
 
 .text-purple {
-  color: #c084fc; /* Custom Violet Accent */
+  color: var(--violet);
 }
 
 .text-green {
-  color: #22c55e; /* Custom Green Accent */
+  color: var(--success);
 }
 
 .text-cyan {
-  color: #75D4E8; /* Custom Platform Cyan Theme Override */
+  color: var(--cyan);
 }
 
-/* Stat Sub-Label Meta Text Elements */
 .metric-label {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #94A3B8;
+  color: var(--text-secondary);
   white-space: nowrap;
 }
 
-/* Bottom Horizontal Axis Line Decoration Graphic */
+/* Axis Line */
 .metrics-axis-line {
   position: relative;
   width: 80%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 20%, rgba(255, 255, 255, 0.08) 80%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--border) 20%,
+    var(--border) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
-/* Interactive Timeline Node Bullets */
+/* Dots */
 .axis-dot {
   position: absolute;
   top: 50%;
@@ -102,47 +105,39 @@
 }
 
 .dot-purple {
-  background-color: #c084fc;
+  background-color: var(--violet);
   box-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
 }
 
 .dot-green {
-  background-color: #22c55e;
+  background-color: var(--success);
   box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
 }
 
-/* ==========================================
-   RESPONSIVE VIEWPORT SUPPORT
-   ========================================== */
+/* Responsive */
 @media (max-width: 1024px) {
   .metrics-title {
     font-size: 36px;
   }
-  
   .metric-number {
     font-size: 44px;
   }
 }
 
 @media (max-width: 768px) {
-  /* Collapses row stack into vertical statistics column array on mobile viewports */
   .metrics-row {
     flex-direction: column;
     align-items: center;
     gap: 48px;
     margin-bottom: 0;
   }
-  
   .metric-item {
     flex: none;
   }
-  
   .metric-number {
     font-size: 48px;
     margin-bottom: 8px;
   }
-
-  /* Structural decorative axis layout line is hidden safely on small screens */
   .metrics-axis-line {
     display: none;
   }
@@ -152,7 +147,6 @@
   .metrics-container {
     padding: 80px 16px;
   }
-
   .metrics-title {
     font-size: 26px;
   }

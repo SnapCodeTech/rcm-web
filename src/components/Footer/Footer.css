@@ -4,13 +4,13 @@
   background-color: transparent;
   padding: 80px 0 40px 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
 }
 
 /* Constrained Alignment Grid System Wrapper */
 .footer-max-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 24px;
   box-sizing: border-box;
@@ -25,7 +25,7 @@
   margin-bottom: 64px;
 }
 
-/* Brand Identity Column Styles */
+/* Brand Identity Column */
 .footer-brand-column {
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 .footer-brand-logo {
   font-size: 22px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: var(--footer-brand-logo);
   margin: 0 0 20px 0;
   letter-spacing: -0.01em;
 }
@@ -43,12 +43,12 @@
 .footer-brand-description {
   font-size: 14px;
   line-height: 1.6;
-  color: #94A3B8;
+  color: var(--footer-brand-description);
   margin: 0 0 24px 0;
   max-width: 320px;
 }
 
-/* Grid Block Layout for Custom App Shortcuts */
+/* Social Icons */
 .footer-social-group {
   display: flex;
   gap: 12px;
@@ -57,13 +57,13 @@
 .social-icon-btn {
   width: 36px;
   height: 36px;
-  background-color: #161720;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: var(--footer-social-bg);
+  border: 1px solid var(--footer-social-border);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #94A3B8;
+  color: var(--footer-social-color);
   text-decoration: none;
   transition: all 0.2s ease;
 }
@@ -74,12 +74,12 @@
 }
 
 .social-icon-btn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: #F8FAFC;
+  background-color: var(--footer-social-hover-bg);
+  border-color: var(--footer-social-hover-border);
+  color: var(--footer-social-hover-color);
 }
 
-/* Navigation Columns Parameters */
+/* Navigation Columns */
 .footer-nav-column {
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@
 .footer-column-heading {
   font-size: 14px;
   font-weight: 600;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin: 0 0 24px 0;
 }
 
@@ -103,25 +103,25 @@
 
 .footer-links-list a {
   font-size: 14px;
-  color: #94A3B8;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.15s ease;
 }
 
 .footer-links-list a:hover {
-  color: #F8FAFC;
+  color: var(--text-primary);
 }
 
-/* Clean Horizontal Micro-line */
+/* Divider */
 .footer-divider {
   border: 0;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: var(--footer-divider);
   margin: 0 0 32px 0;
   width: 100%;
 }
 
-/* Bottom Bar Alignment Rules */
+/* Bottom Bar */
 .footer-bottom-bar {
   display: flex;
   justify-content: flex-start;
@@ -130,25 +130,20 @@
 
 .footer-copyright {
   font-size: 13px;
-  color: #64748B;
+  color: var(--footer-copyright);
   margin: 0;
 }
 
-/* ==========================================
-   RESPONSIVE VIEWPORT SUPPORT
-   ========================================== */
+/* Responsive */
 @media (max-width: 968px) {
   .footer-main-grid {
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 40px 24px;
   }
-  
-  /* Pushes last column to a cleaner wrap layout on medium tablets */
   .footer-brand-column {
     grid-column: span 3;
     margin-bottom: 16px;
   }
-  
   .footer-brand-description {
     max-width: 100%;
   }
@@ -158,21 +153,17 @@
   .zelisy-footer {
     padding: 64px 0 32px 0;
   }
-
   .footer-main-grid {
     grid-template-columns: 1fr;
     gap: 36px;
     margin-bottom: 48px;
   }
-
   .footer-brand-column {
     grid-column: span 1;
   }
-
   .footer-column-heading {
     margin-bottom: 16px;
   }
-
   .footer-links-list {
     gap: 12px;
   }

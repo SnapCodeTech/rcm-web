@@ -1,44 +1,43 @@
 :root {
-    --text: #6b6375;
-    --text-h: #08060d;
-    --bg: #ffffff;
-    /* --border: #e5e4e7; */
-    --code-bg: #f4f3ec;
-    --accent: #aa3bff;
-    --accent-bg: rgba(170, 59, 255, 0.1);
-    --accent-border: rgba(170, 59, 255, 0.5);
-    --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #ffffff;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
 
-    --shadow:
-        rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
-        rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
 
-    --sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --mono: ui-monospace, Consolas, monospace;
+  /* Project Colors */
+  --primary: #B794F6;
+  --primary-dark: #8B5CF6;
 
-    /* Project Colors */
+  --background: #050816;
+  --background-secondary: #0A1020;
+  
 
-    --primary: #B794F6;
-    --primary-dark: #8B5CF6;
+  --card: #111827;
+  --card-light: #1A2236;
 
-    --background: #050816;
-    --background-secondary: #0A1020;
+  --white: #FFFFFF;
 
-    --card: #111827;
-    --card-light: #1A2236;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --description: #d1d5db;
 
-    --white: #FFFFFF;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
 
-    --text-primary: #F8FAFC;
-    --text-secondary: #94A3B8;
+  --gradient-1: #8B5CF6;
+  --gradient-2: #312E81;
 
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-
-    --gradient-1: #8B5CF6;
-    --gradient-2: #312E81;
+  --violet: #c084fc;
+  --cyan: #75D4E8;
 
     font: 18px/145% var(--sans);
     letter-spacing: 0.18px;
@@ -50,14 +49,135 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --delivery-green: #10B981;
-    --delivery-green-bg: rgba(16, 185, 129, 0.06);
-    --delivery-green-border: rgba(16, 185, 129, 0.2);
-    --delivery-canary-green: #4ADE80;
-    
-    --frame-gradient-start: rgba(22, 28, 36, 0.8);
-    --frame-gradient-end: rgba(13, 16, 23, 0.95);
+  --delivery-green: #10B981;
+  --delivery-green-bg: rgba(16, 185, 129, 0.06);
+  --delivery-green-border: rgba(16, 185, 129, 0.2);
+  --delivery-canary-green: #4ADE80;
+
+  --frame-gradient-start: rgba(22, 28, 36, 0.8);
+  --frame-gradient-end: rgba(13, 16, 23, 0.95);
+
+  --teams-card-bg: #181922; /* new background for team cards */
+  --teams-card-border: rgba(255, 255, 255, 0.05); 
+  --bg-dark: #0b0c10;
+  --panel-bg: linear-gradient(135deg, #161720 0%, #11121a 100%);
+  --text-main: #F8FAFC;
+  --text-sub: #94A3B8;
+  --accent-purple: #D3C3FC;
+  --accent-purple-hover: #c4b0fa;
+  --border-light: rgba(255, 255, 255, 0.05);
+  --border-outline: rgba(255, 255, 255, 0.1);
+  
+  /* Hero Section */
+  --gradient1: rgba(113, 74, 170, 0.15);
+  --gradient2: rgba(113, 74, 170, 0);
+  --container-max-width: 1200px;
+  --card-max-width: 960px;
+  --badge-bg: #d1d5db;
+  --badge-dot: #10b981;
+  --badge-text: #a78bfa;
+  --badge-bg-opacity: rgba(167, 139, 250, 0.08);
+  --badge-border-opacity: rgba(167, 139, 250, 0.25);
+
+  --btn-color: rgba(65, 20, 120, 1);
+
+  --secondary: #e1e1ef; /* for gradient headline fallback */
+  --footer-text: #4b5563;
+  --incident-frame-gradient-start: rgba(29, 31, 41, 0.8);
+  --incident-frame-gradient-end: rgba(17, 19, 28, 0.95);
+  --incident-frame-border: rgba(255, 255, 255, 0.08);
+  --neural-badge-text: #75D4E8;
+  --neural-badge-bg-opacity: rgba(117, 212, 232, 0.05);
+  --neural-badge-border-opacity: rgba(117, 212, 232, 0.25);
+
+  --neural-frame-gradient-start: rgba(29, 31, 41, 0.8);
+  --neural-frame-gradient-end: rgba(17, 19, 28, 0.95);
+  --neural-frame-border: rgba(255, 255, 255, 0.08);
+  --consolidation-card-bg: #181922;
+  --consolidation-card-border: rgba(255, 255, 255, 0.05);
+  --consolidation-card-hover-border: rgba(117, 212, 232, 0.2);
+  --delivery-frame-gradient-start: rgba(29, 31, 41, 0.8);
+  --delivery-frame-gradient-end: rgba(17, 19, 28, 0.95);
+  --delivery-frame-border: rgba(255, 255, 255, 0.08);
+
+
+  --pricing-card-bg: #13141C;
+  --pricing-card-border: rgba(255, 255, 255, 0.04);
+
+  --pricing-card-highlight-bg: #161522;
+  --pricing-card-highlight-border: rgba(192, 132, 252, 0.35);
+  --pricing-card-highlight-shadow: rgba(192, 132, 252, 0.08);
+
+  --pricing-popular-badge-bg: #c084fc;
+  --pricing-popular-badge-text: #111119;
+
+  --pricing-btn-secondary-bg: rgba(255, 255, 255, 0.06);
+  --pricing-btn-secondary-border: rgba(255, 255, 255, 0.08);
+  --pricing-btn-secondary-hover-bg: rgba(255, 255, 255, 0.12);
+
+  --pricing-btn-secondary-text: #E2E8F0;
+  --pricing-btn-secondary-hover-text: #FFFFFF;
+
+  --pricing-btn-purple-bg: #c084fc;
+  --pricing-btn-purple-border: #c084fc;
+  --pricing-btn-purple-text: #111119;
+  --pricing-btn-purple-shadow: rgba(192, 132, 252, 0.2);
+  --pricing-btn-purple-hover-bg: #b572fa;
+
+  --pricing-btn-green-bg: #22c55e;
+  --pricing-btn-green-border: #22c55e;
+  --pricing-btn-green-text: #111119;
+  --pricing-btn-green-shadow: rgba(34, 197, 94, 0.15);
+  --pricing-btn-green-hover-bg: #16a34a;
+
+  --pricing-border-green-glow: rgba(34, 197, 94, 0.2);
+
+  --period-text: #64748B;
+  --features-list-text: #CBD5E1;
+  --check-icon-color: #64748B;
+  --intel-badge-text: #a78bfa;
+  --intel-badge-bg-opacity: rgba(167, 139, 250, 0.08);
+  --intel-badge-border-opacity: rgba(167, 139, 250, 0.25);
+
+  --intel-icon-color: #c084fc;
+  --intel-subfeature-title: #f3f4f6;
+
+  --intel-frame-gradient-start: rgba(29, 31, 41, 0.8);
+  --intel-frame-gradient-end: rgba(17, 19, 28, 0.95);
+  --intel-frame-border: rgba(255, 255, 255, 0.08);
+  --security-frame-gradient-start: rgba(29, 31, 41, 0.8);
+  --security-frame-gradient-end: rgba(17, 19, 28, 0.95);
+  --security-frame-border: rgba(255, 255, 255, 0.08);
+
+  --contact-card-border-light: rgba(255, 255, 255, 0.08);
+  --roadmap-bg: #0b0c10;
+  --roadmap-line: rgba(255, 255, 255, 0.37);
+  --navbar-scrolled-bg: rgba(17, 19, 28, 0.85);
+  --navbar-border: rgba(255, 255, 255, 0.05);
+  --navbar-shadow: rgba(0, 0, 0, 0.2);
+
+  --nav-link-color: #94A3B8;
+  --nav-link-hover: var(--violet); /* already defined as #c084fc */
+  --nav-link-active: var(--white);
+  --nav-link-active-line: var(--violet);
+
+  --navbar-btn-bg: rgba(215, 186, 255, 1);
+  --navbar-btn-hover-bg: rgba(196, 166, 238, 1);
+  --navbar-btn-text: #0F1016;
+  --footer-brand-logo: var(--text-primary);
+  --footer-brand-description: var(--text-secondary);
+
+  --footer-social-bg: #161720;
+  --footer-social-border: rgba(255, 255, 255, 0.06);
+  --footer-social-hover-bg: rgba(255, 255, 255, 0.05);
+  --footer-social-hover-border: rgba(255, 255, 255, 0.15);
+  --footer-social-color: var(--text-secondary);
+  --footer-social-hover-color: var(--text-primary);
+
+  --footer-divider: rgba(255, 255, 255, 0.04);
+  --footer-copyright: #64748B;
 }
+
 
 @media (max-width: 1024px) {
     :root {

@@ -1,14 +1,14 @@
 .delivery-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 30px 24px;
   box-sizing: border-box;
   color: var(--white);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
 }
 
-/* Content Layout Grid (Note: Images left, Text right) */
+/* Content Layout Grid */
 .delivery-content-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -54,10 +54,10 @@
 .delivery-subfeatures-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 24px;                          
-  column-gap: 24px;                       
-  width: 591.11px;                        
-  min-height: 144px;                      
+  row-gap: 24px;
+  column-gap: 24px;
+  width: 591.11px;
+  min-height: 144px;
   box-sizing: border-box;
 }
 
@@ -68,7 +68,7 @@
   box-sizing: border-box;
 }
 
-/* Separate Contextual Icon Colors */
+/* Icon Colors */
 .delivery-icon-wrapper-flag {
   color: var(--delivery-green);
   flex-shrink: 0;
@@ -107,7 +107,7 @@
   margin: 0;
 }
 
-/* Left Side Column layout wrapper */
+/* Left Side Column */
 .delivery-image-column {
   display: flex;
   justify-content: center;
@@ -115,17 +115,18 @@
   width: 100%;
 }
 
-/* ==========================================
-   FIGMA LAYOUT PARAMETERS WITH VARIABLES
-   ========================================== */
-
+/* Image Frame */
 .delivery-image-frame {
   width: 580.89px;
   height: 500px;
   border-radius: 32px;
   padding: 16px;
-  background: linear-gradient(130.12deg, rgba(29, 31, 41, 0.8) 0%, rgba(17, 19, 28, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    130.12deg,
+    var(--delivery-frame-gradient-start) 0%,
+    var(--delivery-frame-gradient-end) 100%
+  );
+  border: 1px solid var(--delivery-frame-border);
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -141,9 +142,7 @@
   display: block;
 }
 
-/* ==========================================
-   RESPONSIVE VIEWPORT SUPPORT
-   ========================================== */
+/* Responsive */
 @media (max-width: 1024px) {
   .delivery-image-frame {
     width: 100%;
@@ -161,15 +160,12 @@
 
 @media (min-width: 992px) {
   .delivery-content-grid {
-    /* Explicitly orders image left, content right on desktop layouts */
     grid-template-columns: 55fr 45fr;
     gap: 40px;
   }
-  
   .delivery-image-column {
     order: 1;
   }
-  
   .delivery-text-column {
     order: 2;
   }

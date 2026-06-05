@@ -1,26 +1,11 @@
 import React from "react";
 import "./ZeroTrustSecuritySection.css";
-import { Colors } from "../../constants/Colors"; // Consuming tokens cleanly from your standalone file
 import ZeroTrustVisualization from "../../assets/images/AiEngineeringOs/ZeroTrustVisualization.png";
 
 const ZeroTrustSecuritySection = () => {
-  // Map your design token keys straight into standard scoped CSS variables
-  const themeStyles = {
-    "--white": Colors.white,
-    "--text-primary": Colors.textPrimary,
-    "--text-secondary": Colors.textSecondary,
-    "--description": Colors.description,
-    "--border": Colors.border,
-    "--success": Colors.success,
-    "--badge-text": Colors.badgeText,
-    "--badge-bg-opacity": Colors.badgeBgOpacity,
-    "--badge-border-opacity": Colors.badgeBorderOpacity,
-    "--frame-gradient-start": Colors.frameGradientStart,
-    "--frame-gradient-end": Colors.frameGradientEnd,
-  };
-
+  
   return (
-    <section className="security-container" style={themeStyles}>
+    <section className="security-container" >
       <div className="security-content-grid">
         
         {/* Left Side: Content Details */}
