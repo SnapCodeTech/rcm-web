@@ -1,3 +1,5 @@
+import React from 'react';
+import './InquiryRoadmap.css';
 export default function InquiryRoadmap() {
   const steps = [
     { id: '01', title: 'Initial discussion', text: 'Brief discovery call to understand your team\'s specific goals and pain points.', color: '#c084fc' },

@@ -1,24 +1,36 @@
 .roadmap-container {
-  background-color: #0b0c10;
-  color: white;
+  background-color: var(--roadmap-bg);
+  color: var(--white);
   padding: 80px 20px;
   text-align: center;
 }
 
-.roadmap-header { margin-bottom: 60px; }
-.roadmap-header h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-.roadmap-header p { color: #94a3b8; max-width: 500px; margin: 0 auto; }
+.roadmap-header {
+  margin-bottom: 60px;
+}
+
+.roadmap-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.roadmap-header p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 .roadmap-timeline {
   position: relative;
-  max-width: 800px; /* Increased width to allow room for content on both sides */
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-/* The vertical connecting line (Centered) */
+/* Vertical connecting line */
 .roadmap-timeline::before {
   content: "";
   position: absolute;
@@ -26,9 +38,10 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: rgba(255, 255, 255, 0.37);
-  transform: translateX(-50%); /* Perfectly centers the line */
+  background: var(--roadmap-line);
+  transform: translateX(-50%);
 }
+
 .roadmap-step {
   display: flex;
   align-items: center;
@@ -36,7 +49,7 @@
   width: 100%;
 }
 
-/* Right-side steps need to flip */
+/* Right-side steps flip */
 .right-step {
   flex-direction: row-reverse;
 }
@@ -44,18 +57,18 @@
 .step-node {
   width: 50px;
   height: 50px;
-  border: 1px solid;
+  border: 1px solid var(--border);
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  background: #0b0c10;
+  background: var(--roadmap-bg);
   z-index: 2;
   flex-shrink: 0;
 }
 
-/* Apply your specific margins here */
+/* Margins */
 .left-step .step-node {
   margin: 0px 50px 0px 376px;
 }
@@ -64,12 +77,26 @@
   margin: 0px 376px 0px 50px;
 }
 
-.step-content { 
-  width: 45%; 
+.step-content {
+  width: 45%;
 }
 
-.left-step .step-content { text-align: left; }
-.right-step .step-content { text-align: right; }
+.left-step .step-content {
+  text-align: left;
+}
 
-.step-content h3 { margin: 0 0 8px 0; font-size: 1.25rem; }
-.step-content p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; }
+.right-step .step-content {
+  text-align: right;
+}
+
+.step-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

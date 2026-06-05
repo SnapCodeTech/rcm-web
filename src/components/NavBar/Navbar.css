@@ -6,7 +6,7 @@
   box-sizing: border-box;
   z-index: 1000;
   background: transparent;
-  color: white;
+  color: var(--white);
   padding: 24px 32px;
   display: flex;
   justify-content: space-between;
@@ -17,12 +17,12 @@
 }
 
 .navbar.scrolled {
-  background: rgba(17, 19, 28, 0.85);
+  background: var(--navbar-scrolled-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 16px 32px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--navbar-border);
+  box-shadow: 0 4px 20px var(--navbar-shadow);
 }
 
 .navbar-logo {
@@ -37,7 +37,7 @@
 
 /* Base link layout definitions */
 .navbar-links a.nav-item {
-  color: #94A3B8 !important; /* Muted default text color */
+  color: var(--nav-link-color) !important;
   text-decoration: none !important;
   font-size: 0.9rem;
   font-weight: 500;
@@ -47,18 +47,15 @@
 }
 
 .navbar-links a.nav-item:hover {
-  color: #c084fc !important; /* Hover violet accent color */
+  color: var(--nav-link-hover) !important;
 }
 
-/* =========================================================
-   ACTIVE SELECTION OVERRIDES (White Text + Underline)
-   ========================================================= */
+/* Active link */
 .navbar .navbar-links a.nav-item.active-link {
-  color: #ffffff !important; /* Changes text color to crisp white */
+  color: var(--nav-link-active) !important;
   font-weight: 600 !important;
 }
 
-/* Active bottom bar accent highlight */
 .navbar .navbar-links a.nav-item.active-link::after {
   content: "";
   position: absolute;
@@ -66,14 +63,14 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #c084fc !important; /* Purple active line indicator */
+  background-color: var(--nav-link-active-line) !important;
   border-radius: 2px;
   display: block;
 }
 
 .navbar-button {
-  background: rgba(215, 186, 255, 1);
-  color: #0F1016;
+  background: var(--navbar-btn-bg);
+  color: var(--navbar-btn-text);
   padding: 8px 20px;
   border-radius: 8px;
   border: none;
@@ -84,7 +81,7 @@
 }
 
 .navbar-button:hover {
-  background: rgba(196, 166, 238, 1);
+  background: var(--navbar-btn-hover-bg);
   transform: translateY(-1px);
 }
 

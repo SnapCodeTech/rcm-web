@@ -1,12 +1,12 @@
 /* Container Layout Setup */
 .intel-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 100px 24px;
   box-sizing: border-box;
   color: var(--white);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
 }
 
 /* Section Header Area */
@@ -20,6 +20,7 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0 0 16px 0;
+  color: var(--text-primary);
 }
 
 .intel-section-subtitle {
@@ -27,7 +28,7 @@
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--textSecondary);
+  color: var(--text-secondary);
 }
 
 /* Content Layout Grid */
@@ -49,9 +50,9 @@
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #a78bfa;
-  background-color: rgba(167, 139, 250, 0.08);
-  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: var(--intel-badge-text);
+  background-color: var(--intel-badge-bg-opacity);
+  border: 1px solid var(--intel-badge-border-opacity);
   padding: 6px 14px;
   border-radius: 9999px;
   margin-bottom: 24px;
@@ -62,28 +63,28 @@
   font-weight: 700;
   margin: 0 0 20px 0;
   letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
 .intel-feature-description {
   font-size: 16px;
   line-height: 1.6;
-  color: #9ca3af;
+  color: var(--description);
   margin: 0 0 40px 0;
 }
 
 /* Sub features */
 .intel-subfeatures-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 Columns */
-  row-gap: 24px;                          /* Figma row gap */
-  column-gap: 24px;                       /* Figma column gap */
-  width: 591.11px;                        /* Figma fixed layout width */
-  min-height: 144px;                      /* Figma explicit component height baseline */
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+  column-gap: 24px;
+  width: 591.11px;
+  min-height: 144px;
   box-sizing: border-box;
-  opacity: 1;                             /* Figma opacity metrics */
+  opacity: 1;
 }
 
-/* Individual card configuration adjustments */
 .intel-subfeature-card {
   display: flex;
   gap: 16px;
@@ -92,9 +93,9 @@
 }
 
 .intel-icon-wrapper {
-  color: #c084fc;
+  color: var(--intel-icon-color);
   flex-shrink: 0;
-  margin-top: 2px; /* Centers vector alignment with typography baseline */
+  margin-top: 2px;
 }
 
 .intel-icon {
@@ -106,18 +107,18 @@
   font-size: 15px;
   font-weight: 600;
   margin: 0 0 6px 0;
-  color: #f3f4f6;
+  color: var(--intel-subfeature-title);
   line-height: 1.4;
 }
 
 .intel-subfeature-text p {
   font-size: 13px;
   line-height: 1.5;
-  color: #9ca3af;
+  color: var(--text-secondary);
   margin: 0;
 }
 
-/* Right Side Column layout wrapper */
+/* Right Side Column */
 .intel-image-column {
   display: flex;
   justify-content: center;
@@ -125,18 +126,18 @@
   width: 100%;
 }
 
-/* ==========================================
-   FIGMA STYLES APPLIED BELOW 
-   ========================================== */
-
-/* Outer frame container matching Figma parameters */
+/* Image Frame */
 .intel-image-frame {
   width: 550.89px;
   height: 500px;
   border-radius: 32px;
   padding: 16px;
-  background: linear-gradient(130.12deg, rgba(29, 31, 41, 0.8) 0%, rgba(17, 19, 28, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Fallback clean border edge */
+  background: linear-gradient(
+    130.12deg,
+    var(--intel-frame-gradient-start) 0%,
+    var(--intel-frame-gradient-end) 100%
+  );
+  border: 1px solid var(--intel-frame-border);
   box-sizing: border-box;
   opacity: 1;
   display: flex;
@@ -144,7 +145,6 @@
   justify-content: center;
 }
 
-/* Inner dashboard visualization image element matching Figma parameters */
 .intel-dashboard-img {
   width: 558.89px;
   height: 466px;
@@ -154,18 +154,14 @@
   display: block;
 }
 
-/* ==========================================
-   Responsive Viewport Support
-   ========================================== */
+/* Responsive */
 @media (max-width: 1024px) {
-  /* Keeps the card layout responsive on smaller screen viewports */
   .intel-image-frame {
     width: 100%;
     max-width: 592.89px;
     height: auto;
     aspect-ratio: 592.89 / 500;
   }
-
   .intel-dashboard-img {
     width: 100%;
     height: auto;
@@ -178,7 +174,6 @@
     grid-template-columns: 45fr 55fr;
     gap: 40px;
   }
-  
   .intel-section-title {
     font-size: 44px;
   }
@@ -187,7 +182,7 @@
 @media (max-width: 640px) {
   .intel-subfeatures-grid {
     width: 100%;
-    grid-template-columns: 1fr; /* Reverts to single column list only on tight screen widths */
+    grid-template-columns: 1fr;
     height: auto;
   }
 }

@@ -1,25 +1,13 @@
 import React from "react";
 import "./IncidentManagement.css";
-import { Colors } from "../../constants/Colors"; // Consuming your separate design tokens file
+
 import IncidentCoreVisualization from "../../assets/images/AiEngineeringOs/IncidentCoreVisualization.png"; 
 
 const IncidentManagement = () => {
-  // Map your imported JS color tokens directly into component CSS properties
-  const themeStyles = {
-    "--white": Colors.white,
-    "--text-primary": Colors.textPrimary,
-    "--text-secondary": Colors.textSecondary,
-    "--description": Colors.description,
-    "--border": Colors.border,
-    "--badge-text": Colors.badgeText,
-    "--badge-bg-opacity": Colors.badgeBgOpacity,
-    "--badge-border-opacity": Colors.badgeBorderOpacity,
-    "--frameGradientStart": Colors.frameGradientStart,
-    "--frameGradientEnd": Colors.frameGradientEnd,
-  };
+  
 
   return (
-    <section className="incident-container" style={themeStyles}>
+    <section className="incident-container">
       <div className="incident-content-grid">
         
         {/* Left Side: Showcase Image Card Container (Alternated Alignment Pattern) */}

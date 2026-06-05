@@ -5,7 +5,7 @@
   margin: 0 auto;
   padding: 30px 24px;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--sans);
   background-color: transparent;
 }
 
@@ -19,25 +19,25 @@
   font-size: 42px;
   font-weight: 600;
   line-height: 1.2;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin: 0;
   letter-spacing: -0.01em;
 }
 
-/* Asymmetric Grid Configuration for Row Layout Multipliers */
+/* Grid Layout */
 .teams-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6-column underlying system to handle 3-col and 2-col perfectly */
+  grid-template-columns: repeat(6, 1fr);
   gap: 24px;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Default standard 3-column items span 2 tracks each */
+/* Card Styling */
 .teams-card {
   grid-column: span 2;
-  background: #181922;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--teams-card-bg);
+  border: 1px solid var(--teams-card-border);
   border-radius: 12px;
   padding: 36px 32px;
   box-sizing: border-box;
@@ -47,12 +47,11 @@
   min-height: 200px;
 }
 
-/* Bottom wide items span 3 tracks each */
 .teams-card.card-wide {
   grid-column: span 3;
 }
 
-/* Vector Theme Icon Wrapper Structures */
+/* Icon Box */
 .teams-icon-box {
   width: 24px;
   height: 24px;
@@ -67,61 +66,55 @@
   height: 22px;
 }
 
-/* Strict Color Mapping Based on Figma Layouts */
+/* Color Mapping */
 .card-purple .teams-icon-box {
-  color: #c084fc; /* Violet Brand Accents */
+  color: var(--violet);
 }
 
 .card-green .teams-icon-box {
-  color: #22c55e; /* Green Accents */
+  color: var(--success);
 }
 
 .card-cyan .teams-icon-box {
-  color: #75D4E8; /* Custom Observability Cyan Theme */
+  color: var(--cyan);
 }
 
-/* Text Content Configurations */
+/* Text Content */
 .teams-card-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
-  color: #F8FAFC;
+  color: var(--text-primary);
   margin: 0 0 12px 0;
 }
 
 .teams-card-description {
   font-size: 14px;
   line-height: 1.6;
-  color: #94A3B8;
+  color: var(--text-secondary);
   margin: 0;
 }
 
-/* ==========================================
-   RESPONSIVE VIEWPORT SUPPORT
-   ========================================== */
+/* Responsive */
 @media (max-width: 1024px) {
   .teams-title {
     font-size: 36px;
   }
-  
   .teams-grid {
     gap: 16px;
   }
-  
   .teams-card {
     padding: 28px 24px;
   }
 }
 
 @media (max-width: 850px) {
-  /* Collapse layout into clean stacked lists on mid-tier displays */
   .teams-grid {
     grid-template-columns: 1fr;
     max-width: 580px;
     margin: 0 auto;
   }
-
-  .teams-card, 
+  .teams-card,
   .teams-card.card-wide {
     grid-column: span 1;
     min-height: auto;
@@ -132,7 +125,6 @@
   .teams-container {
     padding: 64px 16px;
   }
-
   .teams-title {
     font-size: 28px;
   }
