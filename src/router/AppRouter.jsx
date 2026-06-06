@@ -13,10 +13,8 @@ export default function AppRouter() {
     return (
         <Router>
             <div className="app-layout-wrapper" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-
                 {/* Global Persistent Sticky Navigation Bar */}
                 <Navbar />
-
                 {/* Main Content Area (With dynamic route switches) */}
                 <main style={{ flex: 1 }}>
                     <Routes>
@@ -26,10 +24,8 @@ export default function AppRouter() {
                         <Route path="/EnterpriseCenter" element={<EnterpriseCenter />} />
                     </Routes>
                 </main>
-
                 {/* Global Persistent Footer Section */}
                 <Footer />
-
             </div>
         </Router>
     );
