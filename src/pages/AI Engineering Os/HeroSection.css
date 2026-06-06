@@ -1,0 +1,236 @@
+/* Base Container */
+.aios-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(
+    135.06% 107.65% at 50% 0%,
+    var(--gradient1)  0%,
+    var(--gradient2) 70%
+  );
+  color: var(--white);
+  font-family: var(--sans);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ambient Glow */
+.aios-glow-top {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: rgba(147, 51, 234, 0.1);
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aios-glow-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content */
+.aios-content {
+  position: relative;
+  z-index: 10;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 80px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Badge */
+.aios-badge-wrapper {
+  margin-bottom: 32px;
+}
+
+.aios-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--badge-bg);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.aios-badge:hover {
+  border-color: var(--border-hover);
+}
+
+.aios-badge-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--badge-dot);
+  border-radius: 50%;
+  position: relative;
+}
+
+.aios-badge-dot::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--badge-dot);
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.75; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* Headline */
+.aios-headline {
+  max-width: var(--card-max-width);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px 0;
+  background: linear-gradient(to bottom, var(--white), var(--white), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.aios-description {
+  width: 657px;
+  height: 56px;
+  opacity: 1;
+  font-family: "Hanken Grotesk", var(--sans);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--description);
+  margin: 0 auto 40px auto;
+}
+
+/* Buttons */
+.aios-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: var(--btn-color);
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(211, 195, 250, 0.25);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-hover);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Footer */
+.aios-footer {
+  margin-top: auto;
+  padding-top: 60px;
+  font-size: 12px;
+  color: var(--footer-text);
+}
+
+/* Responsive */
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .aios-headline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: var(--secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .aios-description {
+    font-size: 16px;
+  }
+  .aios-buttons {
+    flex-direction: row;
+    max-width: none;
+    width: auto;
+  }
+  .btn-primary, .btn-secondary {
+    width: auto;
+  }
+  .desktop-only {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .aios-headline {
+    font-size: 64px;
+  }
+}

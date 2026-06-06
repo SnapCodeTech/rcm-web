@@ -9,7 +9,7 @@ import ScheduleDemo from "./ScheduleDemo";
 export default function ProjectOverview() {
     return (
         <div>
-            <Navbar />
+            
             <div style={{ marginTop: '35px' }}>
                 <HeroSection />
             </div>

@@ -1,0 +1,131 @@
+/* Container Layout Setup */
+.teams-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  box-sizing: border-box;
+  font-family: var(--sans);
+  background-color: transparent;
+}
+
+/* Typography Main Title Header */
+.teams-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.teams-title {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Grid Layout */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card Styling */
+.teams-card {
+  grid-column: span 2;
+  background: var(--teams-card-bg);
+  border: 1px solid var(--teams-card-border);
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 200px;
+}
+
+.teams-card.card-wide {
+  grid-column: span 3;
+}
+
+/* Icon Box */
+.teams-icon-box {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teams-icon-box svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Color Mapping */
+.card-purple .teams-icon-box {
+  color: var(--violet);
+}
+
+.card-green .teams-icon-box {
+  color: var(--success);
+}
+
+.card-cyan .teams-icon-box {
+  color: var(--cyan);
+}
+
+/* Text Content */
+.teams-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.teams-card-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .teams-title {
+    font-size: 36px;
+  }
+  .teams-grid {
+    gap: 16px;
+  }
+  .teams-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  .teams-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .teams-card,
+  .teams-card.card-wide {
+    grid-column: span 1;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .teams-container {
+    padding: 64px 16px;
+  }
+  .teams-title {
+    font-size: 28px;
+  }
+}
