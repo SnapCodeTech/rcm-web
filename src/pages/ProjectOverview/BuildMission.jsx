@@ -103,7 +103,7 @@ const BuildMission = () => {
                                 <div className="buildMissionCardTop">
                                     <div className="buildMissionCardContent">
                                         <p className="buildMissionCardLabel buildMissionCardLabelAccent">RELIABILITY</p>
-                                        <h3 className="buildMissionCardValue">99.999%</h3>
+                                        <h3 className="buildMissionCardValue">99.99%</h3>
                                     </div>
                                     {/* <img
                                         src="/images/img_overlay_blur_80x80.png"
