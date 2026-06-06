@@ -47,7 +47,6 @@ const pipelineStages = [
 ];
 
 export default function InsightTabs() {
-    const [activeTab, setActiveTab] = useState("stage-3");
 
     return (
         <section className="insights-section">
@@ -55,12 +54,10 @@ export default function InsightTabs() {
 
                 <div className="stages-grid">
                     {pipelineStages.map((stage) => {
-                        const isActive = activeTab === stage.id;
                         return (
-                            <button
+                            <div
                                 key={stage.id}
-                                className={`stage-tab-card ${isActive ? "active" : ""}`}
-                                onClick={() => setActiveTab(stage.id)}
+                                className={`stage-tab-card`}
                                 style={{ "--stage-accent": stage.accentColor }}
                             >
                                 <div className="tab-icon-wrapper">
@@ -69,7 +66,7 @@ export default function InsightTabs() {
                                 <span className="tab-title">{stage.title}</span>
                                 <span className="tab-subtitle">{stage.subtitle}</span>
                                 <div className="hover-border-line" />
-                            </button>
+                            </div>
                         );
                     })}
                 </div>

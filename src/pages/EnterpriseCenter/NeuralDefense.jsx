@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCheckCircle, FaShareAlt, FaKey, FaBolt, FaLock, FaBroom, FaShieldAlt, FaMicrochip, FaFingerprint, FaTimesCircle, FaHistory, FaMedkit, FaRegMoneyBillAlt, FaCheck, FaAsterisk } from "react-icons/fa";
 import "./NeuralDefense.css";
+import Self_Healing from '../../assets/images/projectOverview/Self-Healing.png';
 
 export default function NeuralDefense() {
     return (
@@ -247,6 +248,15 @@ export default function NeuralDefense() {
                         <div className="region-progress-stack">
                             <div className="region-progress-item">
                                 <div className="region-meta">
+                                    <span className="region-name">ASIA PACIFIC (SINGAPORE)</span>
+                                    <span className="region-metric text-green">12ms P99</span>
+                                </div>
+                                <div className="progress-track">
+                                    <div className="progress-bar bg-gradient-green" style={{ width: "65%" }} />
+                                </div>
+                            </div>
+                            <div className="region-progress-item">
+                                <div className="region-meta">
                                     <span className="region-name">NORTH AMERICA (US-EAST)</span>
                                     <span className="region-metric text-green">8ms P99</span>
                                 </div>
@@ -262,16 +272,6 @@ export default function NeuralDefense() {
                                 </div>
                                 <div className="progress-track">
                                     <div className="progress-bar bg-green" style={{ width: "70%" }} />
-                                </div>
-                            </div>
-
-                            <div className="region-progress-item">
-                                <div className="region-meta">
-                                    <span className="region-name">ASIA PACIFIC (SINGAPORE)</span>
-                                    <span className="region-metric text-green">12ms P99</span>
-                                </div>
-                                <div className="progress-track">
-                                    <div className="progress-bar bg-gradient-green" style={{ width: "65%" }} />
                                 </div>
                             </div>
                         </div>
@@ -306,14 +306,12 @@ export default function NeuralDefense() {
             </section>
             <section className="healing-section">
                 <div className="healing-container">
-
                     <div className="healing-info">
                         <h2 className="healing-heading">Self-Healing Infrastructure</h2>
                         <p className="healing-description">
                             Zelery isn't just watching; it's acting. Our autonomous response layer triggers
                             rollbacks and localized kill-switches when anomalies exceed defined thresholds.
                         </p>
-
                         <div className="healing-cards-stack">
                             <div className="healing-card">
                                 <div className="card-icon-wrapper icon-danger">
@@ -339,7 +337,12 @@ export default function NeuralDefense() {
 
                     <div className="healing-visual">
                         <div className="cross-bandage-wrapper">
-                            <FaMedkit className="bandage-bg-icon" />
+                            {/* <FaMedkit className="bandage-bg-icon" /> */}
+                            <img
+                                src={Self_Healing}
+                                alt="Global Network Dashboard Interface"
+                                className="mockup-dashboard-img"
+                            />
                         </div>
                     </div>
 

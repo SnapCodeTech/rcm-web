@@ -1,7 +1,6 @@
-/* CONTAINER BASE LAYOUT */
 .stack {
     background: var(--background);
-    padding: 100px 24px 140px;
+    padding: 50px 24px 140px;
     position: relative;
     overflow: hidden;
 }
@@ -32,7 +31,6 @@
     line-height: 1.6;
 }
 
-/* TIMELINE GENERATOR */
 .timeline {
     position: relative;
 }
@@ -52,16 +50,6 @@
             transparent 100%);
 }
 
-.timeline-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-    margin-bottom: 120px;
-}
-
-/* Alternating content matrices */
 .timeline-row.left-content .info-card {
     order: 1;
     justify-self: end;
@@ -84,11 +72,10 @@
     text-align: left;
 }
 
-/* DYNAMIC TIMELINE GLOW DOTS */
 .timeline-dot {
     position: absolute;
     left: 50%;
-    top: 30px;
+    top: 0;
     width: 12px;
     height: 12px;
     transform: translateX(-50%);
@@ -98,9 +85,18 @@
         0 0 0 5px rgba(5, 8, 22, 0.8),
         0 0 16px 4px var(--dot-clr, var(--primary));
     z-index: 5;
+    margin-top: 14px;
 }
 
-/* CARDS STYLING */
+.timeline-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+    margin-bottom: 120px;
+}
+
 .info-card {
     max-width: 480px;
 }
@@ -117,7 +113,11 @@
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 6px 12px;
     border-radius: 6px;
+    margin-top: 5px;
     margin-bottom: 20px;
+    height: 28px;
+    line-height: 1;
+    box-sizing: border-box;
 }
 
 .info-card h3 {
@@ -129,11 +129,21 @@
 
 .subtitle {
     display: inline-block;
-    color: #10b981;
-    /* Green tone from image dashboard */
     font-size: 0.95rem;
     font-weight: 500;
     margin-bottom: 18px;
+}
+
+.timeline-row.left-content .subtitle {
+    color: #b794f6;
+}
+
+.timeline-row.right-content .subtitle {
+    color: #10b981;
+}
+
+.timeline-row:nth-child(3) .subtitle {
+    color: #06b6d4;
 }
 
 .description {
@@ -143,7 +153,6 @@
     margin-bottom: 22px;
 }
 
-/* CUSTOM MODULE CONTENT SPECIFICS */
 .spec-box {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -190,6 +199,7 @@
 .stats-grid {
     display: flex;
     gap: 16px;
+    margin-top: 12px;
 }
 
 .timeline-row.left-content .stats-grid {
@@ -200,9 +210,10 @@
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 6px;
-    padding: 12px 20px;
-    min-width: 130px;
+    padding: 12px 16px;
+    min-width: 140px;
     text-align: left;
+    display: block;
 }
 
 .stat-label {
@@ -212,12 +223,15 @@
     letter-spacing: 0.5px;
     color: var(--text-secondary);
     margin-bottom: 4px;
+    text-transform: uppercase;
 }
 
 .stat-value {
-    font-size: 1.3rem;
+    display: block !important;
+    font-size: 1.2rem !important;
     font-weight: 700;
     color: var(--white);
+    line-height: 1.2;
 }
 
 .pill-wrapper {
@@ -295,7 +309,6 @@
     color: var(--primary);
 }
 
-/* VISUAL GRAPHIC CONTAINER (IMAGE PLACEHOLDERS) */
 .image-card {
     width: 100%;
     max-width: 520px;
@@ -328,19 +341,12 @@
     inset: 0;
     padding: 24px;
     background: rgba(5, 8, 22, .45);
-
     font-family: var(--mono);
     font-size: 0.75rem;
     line-height: 1.8;
-
     color: rgba(255, 255, 255, .65);
 }
 
-.log-success {
-    color: #22c55e;
-}
-
-/* Embedded Module Canvas Graphics */
 .survey-mockup {
     padding: 30px;
     display: flex;
@@ -382,7 +388,6 @@
     color: #10b981;
 }
 
-/* MEDIA QUERIES FOR RESPONSIVENESS */
 @media (max-width: 992px) {
     .timeline::before {
         left: 16px;
