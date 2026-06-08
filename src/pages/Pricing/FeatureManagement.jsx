@@ -8,7 +8,7 @@ const sliderFeatures = [
     description: 'Active toggle management.',
     steps: ['0', '100', '500', '1000', '5000'],
     values: ['0 Flags', '25 Flags', '100 Flags', '500 Flags', '5000 Flags'],
-    initialIndex: 1,
+    initialIndex: 0,
   },
   {
     id: 'sessionReplay',
@@ -47,23 +47,29 @@ const dropdownFeatures = [
   }
 ];
 
-export default function FeatureManagement() {
-  // Sliders State
+export default function FeatureManagement({ onFeaturesChange }) {
   const [sliders, setSliders] = useState(
     sliderFeatures.reduce((acc, f) => ({ ...acc, [f.id]: f.initialIndex }), {})
   );
 
-  // Dropdowns State
   const [dropdowns, setDropdowns] = useState(
     dropdownFeatures.reduce((acc, f) => ({ ...acc, [f.id]: f.options[0] }), {})
   );
 
   const handleSliderChange = (id, val) => {
-    setSliders(prev => ({ ...prev, [id]: parseInt(val, 10) }));
+    const newSliders = { ...sliders, [id]: parseInt(val, 10) };
+    setSliders(newSliders);
+    if (onFeaturesChange) {
+      onFeaturesChange({ sliders: newSliders, dropdowns });
+    }
   };
 
   const handleDropdownChange = (id, val) => {
-    setDropdowns(prev => ({ ...prev, [id]: val }));
+    const newDropdowns = { ...dropdowns, [id]: val };
+    setDropdowns(newDropdowns);
+    if (onFeaturesChange) {
+      onFeaturesChange({ sliders, dropdowns: newDropdowns });
+    }
   };
 
   return (

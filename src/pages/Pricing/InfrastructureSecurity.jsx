@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './InfrastructureSecurity.css';
 
-export default function InfrastructureSecurity() {
-  // 1. Slider State (Secrets Vault)
+export default function InfrastructureSecurity({ onInfraChange }) {
   const sliderSteps = ['NONE', '100', '1K', '5K'];
   const sliderValues = ['0 Entries', '100 Entries', '1K Entries', '5K Entries'];
   const [secretsIndex, setSecretsIndex] = useState(0);
 
-  // 2. Counter States (Workspace Scaling)
   const [activeProjects, setActiveProjects] = useState(100);
   const [teamEnvironments, setTeamEnvironments] = useState(4);
 
-  // 3. Radio State (Data Retention)
   const retentionOptions = [
     { id: '30d', label: '30 Days (+$19/mo)' },
     { id: '90d', label: '90 Days (+$49/mo)' },
@@ -19,6 +16,18 @@ export default function InfrastructureSecurity() {
     { id: '365d', label: '365 Days (+$199/mo)' }
   ];
   const [selectedRetention, setSelectedRetention] = useState('30d');
+
+  // 🔑 Whenever values change, notify parent
+  useEffect(() => {
+    if (onInfraChange) {
+      onInfraChange({
+        secretsVault: sliderValues[secretsIndex],
+        dataRetention: retentionOptions.find(r => r.id === selectedRetention)?.label,
+        activeProjects,
+        teamEnvironments
+      });
+    }
+  }, [secretsIndex, selectedRetention, activeProjects, teamEnvironments, onInfraChange]);
 
   return (
     <div className="infra-section-container">

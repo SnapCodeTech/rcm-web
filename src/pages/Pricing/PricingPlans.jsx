@@ -1,45 +1,45 @@
 import React from "react";
 import "./PricingPlans.css";
 
-const PricingPlans = () => {
+const PricingPlans = ({ onSelectPlan }) => {
   const pricingData = [
-  {
-    title: 'Dev',
-    price: 'Free Forever',
-    features: ['1 project allow', '2 env', '1 user login', '100K events'],
-    buttonText: 'Start Free',
-    variant: 'dev',
-  },
-  {
-    title: 'Startup',
-    price: '$79 / mon',
-    features: ['3 project allow', '5 env', '10 user login', '1M events'],
-    buttonText: 'Upgrade Now',
-    variant: 'startup',
-  },
-  {
-    title: 'Growth',
-    price: '$249 / mon',
-    features: ['10 project allow', '20 env', '30 user login', '5M events'],
-    buttonText: 'Scale Fast',
-    variant: 'growth',
-    isPopular: true,
-  },
-  {
-    title: 'Business',
-    price: '$799 / mon',
-    features: ['50 project allow', '100 env', '100 user login', '50M events'],
-    buttonText: 'Go Enterprise',
-    variant: 'business',
-  },
-  {
-    title: 'Enterprise',
-    price: 'Fully Custom',
-    features: ['Unlimited Projects', 'Dedicated TAM', 'Custom Retention', '24/7 Priority'],
-    buttonText: 'Contact Sales',
-    variant: 'enterprise',
-  },
-];
+    {
+      title: 'Dev',
+      price: 'Free Forever',
+      features: ['1 project allow', '2 env', '1 user login', '100K events'],
+      buttonText: 'Start Free',
+      variant: 'dev',
+    },
+    {
+      title: 'Startup',
+      price: '$79 / mon',
+      features: ['3 project allow', '5 env', '10 user login', '1M events'],
+      buttonText: 'Upgrade Now',
+      variant: 'startup',
+    },
+    {
+      title: 'Growth',
+      price: '$249 / mon',
+      features: ['10 project allow', '20 env', '30 user login', '5M events'],
+      buttonText: 'Scale Fast',
+      variant: 'growth',
+      isPopular: true,
+    },
+    {
+      title: 'Business',
+      price: '$799 / mon',
+      features: ['50 project allow', '100 env', '100 user login', '50M events'],
+      buttonText: 'Go Enterprise',
+      variant: 'business',
+    },
+    {
+      title: 'Enterprise',
+      price: 'Fully Custom',
+      features: ['Unlimited Projects', 'Dedicated TAM', 'Custom Retention', '24/7 Priority'],
+      buttonText: 'Contact Sales',
+      variant: 'enterprise',
+    },
+  ];
 
   return (
     <div className="pricing-container">
@@ -72,7 +72,10 @@ const PricingPlans = () => {
               ))}
             </ul>
 
-            <button className={`card-button btn-${card.variant}`}>
+            <button
+              className={`card-button btn-${card.variant}`}
+              onClick={() => onSelectPlan(card)}   
+            >
               {card.buttonText}
             </button>
           </div>
