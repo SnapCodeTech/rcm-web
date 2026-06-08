@@ -1,0 +1,227 @@
+/* Container styling */
+.pricing-container {
+  background-color: var(--pricing-container-bg);
+  color: var(--white);
+  padding: 40px 20px;
+  font-family: var(--sans);
+  min-height: 100vh;
+}
+
+/* Header & Step Badge */
+.pricing-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step-badge {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.pricing-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Grid Layout */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+/* Base Card Styles */
+.pricing-card {
+  background-color: var(--pricing-card-bg);
+  border: 1px solid var(--pricing-card-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 380px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Specific Card Border Variations */
+.card-startup {
+  border-color: var(--color-startup);
+}
+
+.card-growth {
+  border-color: var(--pricing-card-highlight-border);
+  background-color: var(--pricing-card-highlight-bg);
+}
+
+.card-enterprise {
+  border-color: var(--color-enterprise-cyan);
+}
+
+/* Popular Badge styling options */
+.popular-card {
+  border-width: 1.5px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -18px;
+  right: 20px;
+  background-color: var(--primary);
+  color: var(--pricing-popular-badge-text);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* General Card Hover States */
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Individual Card border/shadow glows on hover */
+.card-startup:hover {
+  border-color: var(--color-startup-hover);
+  box-shadow: 0 12px 30px var(--pricing-btn-purple-shadow);
+}
+
+.card-growth:hover {
+  border-color: var(--violet);
+  box-shadow: 0 12px 30px var(--pricing-card-highlight-shadow);
+}
+
+.card-enterprise:hover {
+  border-color: var(--color-enterprise-hover);
+  box-shadow: 0 12px 30px var(--color-cyan-glow);
+}
+
+/* Typography Inside Cards */
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--text-primary);
+}
+
+.card-price {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 24px 0;
+}
+
+/* Enterprise exceptional color matching image configuration */
+.card-enterprise .card-price {
+  color: var(--color-enterprise-cyan);
+  font-weight: 600;
+}
+
+/* Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  flex-grow: 1;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--features-list-text);
+  margin-bottom: 12px;
+}
+
+.check-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-enterprise-cyan); 
+  flex-shrink: 0;
+}
+
+/* Universal Button Bases */
+.card-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid var(--border-outline);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Interactive Base Button Zoom Override */
+.card-button:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+/* Standard Outline Buttons (Dev & Business options) Hover */
+.pricing-card:not(.card-startup):not(.card-growth):not(.card-enterprise) .card-button:hover,
+.btn-business:hover {
+  background-color: var(--pricing-btn-secondary-hover-bg);
+  border-color: var(--text-secondary);
+  color: var(--pricing-btn-secondary-hover-text);
+}
+
+/* Startup Purple Button Layout */
+.btn-startup {
+  background-color: var(--accent-purple);
+  color: var(--color-startup-btn-text);
+  border: none;
+}
+
+.btn-startup:hover {
+  background-color: var(--accent-purple-hover);
+  box-shadow: 0 0 16px var(--pricing-btn-purple-shadow);
+}
+
+/* Growth Primary Accent Button Layout */
+.btn-growth {
+  background-color: var(--pricing-btn-purple-bg);
+  color: var(--pricing-btn-purple-text);
+  border: none;
+  box-shadow: 0 0 12px var(--pricing-btn-purple-shadow);
+}
+
+.btn-growth:hover {
+  background-color: var(--pricing-btn-purple-hover-bg);
+  box-shadow: 0 0 20px rgba(192, 132, 252, 0.6);
+}
+
+/* Enterprise Solid Cyan Accent Button Layout */
+.btn-enterprise {
+  background-color: var(--color-enterprise-btn);
+  color: var(--text-h);
+  border: none;
+}
+
+.btn-enterprise:hover {
+  background-color: var(--white);
+  box-shadow: 0 0 20px var(--color-cyan-glow);
+}
+

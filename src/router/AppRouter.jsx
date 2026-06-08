@@ -7,6 +7,7 @@ import EnterpriseCenter from '../pages/EnterpriseCenter/EnterpriseCenter'
 import Navbar from "../components/Navbar/Navbar"; // Adjust file path to match your folder structure
 import Footer from "../components/Footer/Footer";
 import Contact from "../pages/Contact/Contact";
+import Pricing from "../pages/Pricing/Pricing";
 // import ContactPage from "../pages/ContactPage";
 
 export default function AppRouter() {
@@ -21,6 +22,7 @@ export default function AppRouter() {
                         <Route path="/" element={<AiEngineeringOs />} />
                         <Route path="/overview" element={<ProjectOverview />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/pricing" element={<Pricing />} />
                         <Route path="/EnterpriseCenter" element={<EnterpriseCenter />} />
                     </Routes>
                 </main>
