@@ -1,8 +1,8 @@
 /* Container section adjustments */
 .traffic-container {
-  background-color: var(--pricing-container-bg);
+  /* background-color: var(--pricing-container-bg); */
   color: var(--white);
-  padding: 40px 20px;
+  padding: 10px 20px;
   font-family: var(--sans);
   max-width: var(--container-max-width);
   margin: 0 auto;

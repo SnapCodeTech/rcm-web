@@ -86,7 +86,6 @@
 }
 
 .field input,
-.field select,
 .field textarea {
   background: var(--background-secondary);
   border: 1px solid var(--border);
@@ -94,6 +93,26 @@
   border-radius: 8px;
   color: var(--white);
   font-size: 0.9rem;
+
+  
+}
+.field select {
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.9rem;
+
+  /* Add these */
+  appearance: none;              /* hide native arrow */
+  -webkit-appearance: none;      /* Safari */
+  -moz-appearance: none;         /* Firefox */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23ffffff' height='12' viewBox='0 0 24 24' width='12' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* adjust arrow position */
+  background-size: 12px;
+  padding-right: 32px;           /* space for arrow */
 }
 
 .field textarea {
