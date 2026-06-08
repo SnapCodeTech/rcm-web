@@ -1,5 +1,5 @@
 /* Container Layout Setup */
-.pricing-container {
+.transparent-pricing-container {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
@@ -10,25 +10,29 @@
 }
 
 /* Typography Center Header */
-.pricing-header {
+.transparent-pricing-header {
   text-align: center;
-  margin-bottom: 72px;
+  max-width: 850px;
+  margin: 0 auto 80px auto;
 }
 
 .pricing-title {
-  font-size: 44px;
-  font-weight: 700;
+  display: block;          /* ensures it sits above */
+  font-size: 42px;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--text-primary);
-  margin: 0 0 16px 0;
-  letter-spacing: -0.02em;
+  margin-bottom: 16px;     /* spacing between h2 and p */
+  letter-spacing: -0.01em;
 }
 
 .pricing-subtitle {
+  display: block;          /* ensures it sits below */
   font-size: 16px;
   color: var(--description);
-  margin: 0;
+  margin: 0;               /* no extra margin */
 }
+
 
 /* Grid Layout */
 .pricing-grid {
@@ -119,6 +123,11 @@
   flex-grow: 1;
 }
 
+.features-list i {
+  margin-right: 8px;
+  color: var(--accent-purple); /* or green depending on tier */
+}
+
 .features-list li {
   font-size: 13.5px;
   line-height: 1.5;
@@ -132,6 +141,8 @@
   color: var(--check-icon-color);
   font-weight: bold;
   flex-shrink: 0;
+  /* height: 20px !important;
+  font-size: 0 !important; */
 }
 
 /* Variations */
@@ -153,7 +164,7 @@
   text-align: center;
 }
 
-.btn-secondary {
+.btn-secondarys {
   background: var(--pricing-btn-secondary-bg);
   border: 1px solid var(--pricing-btn-secondary-border);
   color: var(--pricing-btn-secondary-text);

@@ -1,11 +1,12 @@
 import React from "react";
 import "./TransparentPricingSection.css";
+import { FaCheck } from "react-icons/fa";
 
 const TransparentPricingSection = () => {
   return (
-    <section className="pricing-container">
+    <section className="transparent-pricing-container">
       {/* Top Typography Header Block */}
-      <div className="pricing-header">
+      <div className="transparent-pricing-header">
         <h2 className="pricing-title">One platform. Transparent pricing.</h2>
         <p className="pricing-subtitle">Scale your observability as your engineering team grows.</p>
       </div>
@@ -26,16 +27,16 @@ const TransparentPricingSection = () => {
           </div>
           <ul className="features-list">
             <li>
-              <span className="check-icon">✓</span> 3 Users
+              <FaCheck /> 3 Users
             </li>
             <li>
-              <span className="check-icon">✓</span> 5GB Data
+              <FaCheck /> 5GB Data
             </li>
             <li>
-              <span className="check-icon">✓</span> 7-day Retention
+              <FaCheck /> 7-day Retention
             </li>
           </ul>
-          <button className="pricing-btn btn-secondary">Get Started</button>
+          <button className="pricing-btn btn-secondarys">Get Started</button>
         </div>
 
         {/* Tier 2: Pro (Highlighted Card Layout) */}
@@ -52,16 +53,16 @@ const TransparentPricingSection = () => {
           </div>
           <ul className="features-list">
             <li>
-              <span className="check-icon icon-purple">✓</span> Unlimited Users
+              <FaCheck /> Unlimited Users
             </li>
             <li>
-              <span className="check-icon icon-purple">✓</span> 100GB Data
+              <FaCheck /> 100GB Data
             </li>
             <li>
-              <span className="check-icon icon-purple">✓</span> 30-day Retention
+              <FaCheck /> 30-day Retention
             </li>
             <li>
-              <span className="check-icon icon-purple">⚡</span> AI Root Cause Analysis
+              <span >⚡</span> AI Root Cause Analysis
             </li>
           </ul>
           <button className="pricing-btn btn-primary-purple">Start Free Trial</button>
@@ -80,19 +81,20 @@ const TransparentPricingSection = () => {
           </div>
           <ul className="features-list">
             <li>
-              <span className="check-icon">✓</span> 500GB Data
+              <FaCheck /> 500GB Data
             </li>
             <li>
-              <span className="check-icon">✓</span> 90-day Retention
+              <FaCheck /> 90-day Retention
             </li>
             <li>
-              <span className="check-icon">✓</span> Priority Support
+              <FaCheck /> Priority Support
             </li>
             <li>
-              <span className="check-icon">✓</span> Custom Dashboards
+              <FaCheck /> Custom Dashboards
             </li>
           </ul>
-          <button className="pricing-btn btn-secondary">Start Free Trial</button>
+          {/* <button className="pricing-btn btn-secondary">Start Free Trial</button> */}
+           <button className="pricing-btn btn-secondarys">Start Free Trial</button>
         </div>
 
         {/* Tier 4: Enterprise */}
@@ -107,19 +109,19 @@ const TransparentPricingSection = () => {
           </div>
           <ul className="features-list">
             <li>
-              <span className="check-icon">✓</span> Unlimited Data
+              <FaCheck /> Unlimited Data
             </li>
             <li>
-              <span className="check-icon">✓</span> Unlimited Retention
+              <FaCheck /> Unlimited Retention
             </li>
             <li>
-              <span className="check-icon">✓</span> Dedicated Support
+              <FaCheck /> Dedicated Support
             </li>
             <li>
-              <span className="check-icon icon-green">✓</span> 100% SLA Guarantee
+              <FaCheck /> 100% SLA Guarantee
             </li>
           </ul>
-          <button className="pricing-btn btn-secondary">Contact Sales</button>
+          <button className="pricing-btn btn-secondarys">Contact Sales</button>
         </div>
 
         {/* Tier 5: Custom (Green Highlight Accents) */}
@@ -133,13 +135,13 @@ const TransparentPricingSection = () => {
           </div>
           <ul className="features-list">
             <li>
-              <span className="check-icon icon-green">🛡️</span> Air-gapped deployments
+              <span className=" icon-green">🛡️</span> Air-gapped deployments
             </li>
             <li>
-              <span className="check-icon icon-green">🔑</span> Post-quantum encryption
+              <span className=" icon-green">🔑</span> Post-quantum encryption
             </li>
             <li>
-              <span className="check-icon icon-green">👥</span> Dedicated engineering pod
+              <span className=" icon-green">👥</span> Dedicated engineering pod
             </li>
           </ul>
           <button className="pricing-btn btn-primary-green">Request Quote</button>
