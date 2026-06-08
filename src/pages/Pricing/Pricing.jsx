@@ -6,6 +6,7 @@ import FeatureManagement from "./FeatureManagement";
 import InfrastructureSecurity from "./InfrastructureSecurity";
 import BasePresetAndSummary from "./BasePresetAndSummary";
 import ZelisyPricing from "./ZelisyPricing";
+import './Pricing.css';
 
 export default function Pricing() {
   const [selectedPlan, setSelectedPlan] = useState(null);

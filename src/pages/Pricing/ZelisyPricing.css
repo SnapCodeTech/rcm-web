@@ -1,5 +1,5 @@
 .zelisy-wrapper {
-  background-color: var(--bg-darkness);
+  /* background-color: var(--bg-darkness); */
   color: var(--text-white);
   /* REFACTORED: Replaced fixed 176px side padding with responsive sizing */
   padding: 30px 24px; 

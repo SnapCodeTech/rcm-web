@@ -56,10 +56,10 @@ const PricingPlans = ({ onSelectPlan }) => {
           >
             {card.isPopular && <div className="popular-badge">POPULAR</div>}
             
-            <div className="card-top">
+            <div className="card-tops">
               <h3 className="card-title">{card.title}</h3>
-              <p className="card-price">{card.price}</p>
             </div>
+            <p className="card-price">{card.price}</p>
 
             <ul className="features-list">
               {card.features.map((feature, idx) => (

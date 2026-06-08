@@ -1,6 +1,6 @@
 /* Layout Container */
 .features-section-container {
-  background-color: var(--pricing-container-bg);
+  /* background-color: var(--pricing-container-bg); */
   color: var(--white);
   padding: 40px 20px;
   font-family: var(--sans);
@@ -80,7 +80,7 @@
 }
 
 .panel-title {
-  font-size: 15px;
+  font-size: 16px !important;
   font-weight: 600;
   margin: 0 0 4px 0;
   color: var(--text-primary);

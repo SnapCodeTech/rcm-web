@@ -1,10 +1,10 @@
 /* Container styling */
 .pricing-container {
-  background-color: var(--pricing-container-bg);
+  /* background-color: var(--pricing-container-bg); */
   color: var(--white);
-  padding: 40px 20px;
+  padding: 30px 20px;
   font-family: var(--sans);
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* Header & Step Badge */
@@ -120,14 +120,22 @@
 .card-title {
   font-size: 24px;
   font-weight: 600;
-  margin: 0 0 12px 0;
+  margin: 0;                 /* no bottom margin here */
   color: var(--text-primary);
 }
 
+.card-tops {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
 .card-price {
-  font-size: 16px;
+  font-size: 13px;
   color: var(--text-secondary);
-  margin: 0 0 24px 0;
+  margin: 0px 0 24px 0;      /* spacing above and below */
+  display: block;            /* ensures it sits on its own line */
 }
 
 /* Enterprise exceptional color matching image configuration */
@@ -221,7 +229,7 @@
 }
 
 .btn-enterprise:hover {
-  background-color: var(--white);
+  background-color: var(--color-enterprise-hover);
   box-shadow: 0 0 20px var(--color-cyan-glow);
 }
 
