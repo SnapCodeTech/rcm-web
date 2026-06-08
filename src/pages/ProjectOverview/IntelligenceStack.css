@@ -21,6 +21,19 @@
     color: var(--white);
     margin-bottom: 25px;
     letter-spacing: -0.5px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 992px) {
+    .stack-header h1 {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+        line-height: 1.2;
+    }
+
+    .stack-header {
+        margin-bottom: 60px;
+    }
 }
 
 .stack-header p {
