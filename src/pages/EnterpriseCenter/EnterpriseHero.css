@@ -1,0 +1,125 @@
+.hero-section {
+    background: var(--background, #050816);
+    padding: 120px 24px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-badge {
+    background: rgba(214, 188, 250, 0.05);
+    border: 1px solid rgba(214, 188, 250, 0.25);
+    border-radius: 100px;
+    padding: 6px 20px;
+    margin-bottom: 40px;
+}
+
+.badge-text {
+    font-family: var(--sans, system-ui, sans-serif);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #D6BCFA;
+}
+
+.hero-heading {
+    font-family: var(--sans, system-ui, sans-serif);
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--text-primary, #F8FAFC);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 1100px;
+    margin: 0 auto 32px;
+}
+
+.heading-accent {
+    color: #D6BCFA;
+}
+
+.hero-subtext {
+    font-family: var(--sans, system-ui, sans-serif);
+    font-size: clamp(1.05rem, 1.25vw, 1.25rem);
+    color: var(--text-secondary, #94A3B8);
+    line-height: 1.6;
+    max-width: 820px;
+    margin: 0 auto 48px;
+    opacity: 0.85;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btn-initialize {
+    font-family: var(--sans, system-ui, sans-serif);
+    background: #D6BCFA;
+    color: #321670;
+    border: none;
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 20px rgba(183, 148, 246, 0.25);
+}
+
+.btn-initialize:hover {
+    background: #C084FC;
+}
+
+.btn-initialize:active {
+    transform: scale(0.98);
+}
+
+.btn-audit {
+    font-family: var(--sans, system-ui, sans-serif);
+    background: transparent;
+    color: var(--text-secondary, #94A3B8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 16px 36px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-audit:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-primary, #F8FAFC);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-audit:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 640px) {
+    .hero-section {
+        padding-top: 80px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-initialize,
+    .btn-audit {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+}

@@ -4,6 +4,7 @@ import StagesSection from "./StagesSection";
 import BuildMission from "./BuildMission";
 import IntelligenceStack from "./IntelligenceStack";
 import PlatformArchitecture from "./PlatformArchitecture";
+import ScheduleDemo from "./ScheduleDemo";
 
 export default function ProjectOverview() {
     return (
@@ -23,6 +24,9 @@ export default function ProjectOverview() {
             </div>
             <div style={{ marginTop: '-100px' }}>
                 <PlatformArchitecture />
+            </div>
+            <div style={{ marginTop: '-50px' }}>
+                <ScheduleDemo />
             </div>
         </div>
     );
