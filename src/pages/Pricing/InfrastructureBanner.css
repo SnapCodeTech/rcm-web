@@ -1,0 +1,100 @@
+.infra-banner {
+  background: var(--background-secondary);
+  color: var(--white);
+  padding: 100px 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infra-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.infra-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: var(--badge-bg-opacity);
+  border: 1px solid var(--badge-border-opacity);
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--badge-text);
+  margin-bottom: 24px;
+  transition: border-color 0.2s ease;
+}
+
+.infra-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--badge-dot);
+}
+
+.infra-badge:hover {
+  border-color: var(--primary);
+}
+
+/* Title & Description */
+.infra-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.infra-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .infra-title {
+    font-size: 2.4rem;
+  }
+  .infra-description {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .infra-banner {
+    padding: 80px 20px;
+  }
+  .infra-title {
+    font-size: 2rem;
+  }
+  .infra-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .infra-banner {
+    padding: 60px 16px;
+  }
+  .infra-title {
+    font-size: 1.6rem;
+  }
+  .infra-description {
+    font-size: 0.85rem;
+  }
+}

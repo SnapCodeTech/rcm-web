@@ -35,7 +35,7 @@
   gap: 32px;
 }
 
-/* Base link layout definitions */
+/* Base link layout */
 .navbar-links a.nav-item {
   color: var(--nav-link-color) !important;
   text-decoration: none !important;
@@ -50,7 +50,6 @@
   color: var(--nav-link-hover) !important;
 }
 
-/* Active link */
 .navbar .navbar-links a.nav-item.active-link {
   color: var(--nav-link-active) !important;
   font-weight: 600 !important;
@@ -87,4 +86,73 @@
 
 body {
   padding-top: 88px; 
+}
+
+/* Close icon */
+.close-icon {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 20px;
+  }
+  .navbar-links {
+    gap: 24px;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px;
+  }
+
+  .navbar-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--navbar-scrolled-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--navbar-shadow);
+  }
+
+  .navbar-links.open {
+    display: flex; /* show when toggled */
+  }
+
+  .navbar-button {
+    display: none; /* hide CTA button on small screens */
+  }
+
+  /* Hamburger menu */
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+    width: 28px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger span {
+    background: var(--white);
+    height: 3px;
+    width: 100%;
+    display: block;
+  }
 }
