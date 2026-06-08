@@ -1,45 +1,93 @@
+import {
+  Rocket,
+  Ruler,
+  FlaskConical,
+  TrendingUp,
+  ArrowUpRight,
+  Activity,
+  Asterisk,
+  GitBranch,
+  KeyRound,
+  Gauge,
+  ShieldCheck,
+} from "lucide-react";
+
 const cards = [
   {
-    icon: "📊",
+    icon: <Activity size={24} strokeWidth={2} />,
+    iconClass: "health-icon",
     title: "Monitor Application Health",
     description:
-      "Track errors, performance degradation and system reliability in real time.",
+      "Real-time health monitoring specifically for feature rollouts. Detect memory leaks or CPU spikes tied to individual flags before they affect all users.",
     badge: "24/7 Monitoring",
   },
   {
-    icon: "⚡",
+    icon: <Asterisk size={24} strokeWidth={2.2} />,
+    iconClass: "incident-icon",
     title: "Incident Response & RCA",
     description:
-      "Connect incidents directly to releases and identify root causes faster.",
+      "Instantly identify which flag caused a production incident. Our Root Cause Analysis engine correlates error spikes with flag changes in milliseconds.",
     badge: "Faster RCA",
   },
   {
-    icon: "🔗",
+    icon: <GitBranch size={24} strokeWidth={2} />,
+    iconClass: "api-icon",
     title: "API Reliability & Performance",
     description:
-      "Measure API health and understand impact across environments.",
+      "Manage API versioning and deprecation via flags. Shift traffic between legacy and new endpoints with surgical precision and zero downtime.",
     badge: "API Analytics",
   },
   {
-    icon: "🔐",
+    icon: <KeyRound size={24} strokeWidth={2} />,
+    iconClass: "secret-icon",
     title: "Secure Secrets & Credentials",
     description:
-      "Manage secrets securely across deployments and product environments.",
+      "Inject secrets safely into your application environment. Encrypted at rest and in transit, integrated directly with your flag-based delivery workflow",
     badge: "Encrypted Storage",
   },
   {
-    icon: "🛡️",
+    icon: <Gauge size={24} strokeWidth={2} />,
+    iconClass: "rate-icon",
     title: "Protect APIs with Rate Limiting",
     description:
-      "Prevent abuse and improve availability with smart traffic controls.",
+      "Dynamic rate limiting governed by feature flags. Tier access for different user segments without redeploying infrastructure.",
     badge: "Traffic Control",
   },
   {
-    icon: "🏢",
+    icon: <ShieldCheck size={24} strokeWidth={2} />,
+    iconClass: "governance-icon",
     title: "Enterprise Governance",
     description:
-      "Ensure compliance with RBAC, audit logs and approval workflows.",
+      "Maintain strict control over who can toggle what. Full audit trails, approval workflows, and SOC2 compliant access controls for enterprise scale.",
     badge: "Compliance Ready",
+  },
+];
+
+const workflowItems = [
+  {
+    icon: <Rocket size={34} strokeWidth={1.8} />,
+    title: "Release",
+    subtitle: "CANARY DEPLOY",
+  },
+  {
+    icon: <Ruler size={34} strokeWidth={1.8} />,
+    title: "Measure",
+    subtitle: "TELEMETRY SYNC",
+  },
+  {
+    icon: <FlaskConical size={34} strokeWidth={1.8} />,
+    title: "Experiment",
+    subtitle: "A/B VARIATION",
+  },
+  {
+    icon: <TrendingUp size={34} strokeWidth={1.8} />,
+    title: "Analyze",
+    subtitle: "BEHAVIOR BI",
+  },
+  {
+    icon: <ArrowUpRight size={34} strokeWidth={1.8} />,
+    title: "Scale",
+    subtitle: "FULL ROLLOUT",
   },
 ];
 
@@ -55,8 +103,8 @@ const AnalyticsBlock = () => {
           <h2 className="section-title">Optimize Product Growth</h2>
 
           <p className="section-description analytics-description">
-            Gain visibility into how users interact with your product,
-            understand adoption trends and discover opportunities for growth.
+            Our closed-loop workflow ensures every line of code translates to
+            measurable business value.
           </p>
         </div>
 
@@ -65,38 +113,11 @@ const AnalyticsBlock = () => {
         <div className="workflow-container">
           <div className="workflow-track"></div>
 
-          {[
-            {
-              icon: "🚀",
-              title: "Release",
-              subtitle: "CANARY DEPLOY",
-            },
-            {
-              icon: "📏",
-              title: "Measure",
-              subtitle: "TELEMETRY SYNC",
-            },
-            {
-              icon: "⚗️",
-              title: "Experiment",
-              subtitle: "A/B VARIATION",
-            },
-            {
-              icon: "📈",
-              title: "Analyze",
-              subtitle: "BEHAVIOR BI",
-            },
-            {
-              icon: "↗",
-              title: "Scale",
-              subtitle: "FULL ROLLOUT",
-            },
-          ].map((item) => (
+          {workflowItems.map((item) => (
             <div className="workflow-step" key={item.title}>
               <div className="workflow-icon">{item.icon}</div>
 
               <h4>{item.title}</h4>
-
               <span>{item.subtitle}</span>
             </div>
           ))}

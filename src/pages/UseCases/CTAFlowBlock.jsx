@@ -75,17 +75,41 @@ const CTAFlowBlock = () => {
       </div>
 
       <div className="migration-card">
-        <div className="section-badge">Migration Support</div>
+        <div className="migration-content">
+          <div className="section-badge">Limited Offer</div>
 
-        <h2 className="section-title">Free Migration Assistance</h2>
+          <h2 className="section-title">Free Migration Assistance</h2>
 
-        <p className="section-description">
-          Moving from LaunchDarkly, Optimizely, Split, Datadog or other
-          platforms? Our team helps migrate your flags, experiments and
-          analytics without disruption.
-        </p>
+          <p className="section-description">
+            Switching from LaunchDarkly, Optimizely, or Split? Our engineering
+            team will port your flags and experiments for free on Growth+ plans.
+          </p>
 
-        <button className="primary-btn">Talk to an Expert</button>
+          <button className="primary-btn">Talk to an Expert</button>
+        </div>
+
+        <div className="migration-benefits">
+          {/* <h4>Included at No Cost</h4> */}
+
+          <div className="benefit-item">
+            <span>01.</span>
+            <p style={{ fontWeight: 700, lineHeight: "1.5" }}>Logic Mapping</p>
+          </div>
+
+          <div className="benefit-item">
+            <span>02.</span>
+            <p style={{ fontWeight: 700, lineHeight: "1.5" }}>
+              SDK Transition Guide
+            </p>
+          </div>
+
+          <div className="benefit-item">
+            <span>03.</span>
+            <p style={{ fontWeight: 700, lineHeight: "1.5" }}>
+              Historical Data Import
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Final CTA */}

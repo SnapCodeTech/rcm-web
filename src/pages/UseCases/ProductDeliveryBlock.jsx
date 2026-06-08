@@ -1,3 +1,5 @@
+import { PanelLeftClose, UserRoundSearch, Users } from "lucide-react";
+
 const ProductDeliveryBlock = () => {
   return (
     <section className="product-delivery-section">
@@ -112,50 +114,45 @@ const ProductDeliveryBlock = () => {
 
           <div className="feature-content">
             <div className="feature-heading">
-              <div className="feature-icon">📊</div>
+              <div className="feature-icon">
+                <UserRoundSearch size={24} />
+              </div>
 
-              <h2 style={{ lineHeight: 1 }}>Understand User Behavior</h2>
+              <h2>Understand User Behavior</h2>
             </div>
 
-            <div className="content-block">
-              <span>CHALLENGE</span>
+            <p className="feature-description">
+              Don't just release—know exactly how your users interact with new
+              features. Zelery provides deep event-level attribution mapped
+              directly to feature flags.
+            </p>
 
-              <p>
-                Teams often struggle to understand how users interact with their
-                product, which features drive value, and where users drop off
-                during their journey.
-              </p>
-            </div>
+            <div className="feature-points">
+              <div className="feature-point">
+                <PanelLeftClose size={18} />
 
-            <div className="content-block">
-              <span>HOW WE HELP</span>
+                <div>
+                  <h4>Session Replay + Flags</h4>
 
-              <p>
-                Track events, build funnels, analyze retention, and visualize
-                user journeys to uncover insights that drive better product
-                decisions and growth.
-              </p>
-            </div>
+                  <p>
+                    See exactly what the user saw when a specific flag was
+                    active.
+                  </p>
+                </div>
+              </div>
 
-            <div className="content-block">
-              <span>OUTCOMES</span>
+              <div className="feature-point">
+                <Users size={18} />
 
-              <ul className="outcomes-grid">
-                <li>Better Product Decisions</li>
-                <li>Improved Onboarding</li>
-                <li>Increased Retention</li>
-                <li>Faster Growth</li>
-              </ul>
-            </div>
+                <div>
+                  <h4>Cohort Tracking</h4>
 
-            <div className="feature-tags">
-              <span>Events</span>
-              <span>Funnels</span>
-              <span>Retention</span>
-              <span>Cohorts</span>
-              <span>User Journeys</span>
-              <span>Dashboards</span>
-              <span>Reports</span>
+                  <p>
+                    Compare retention and conversion across different feature
+                    variants.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
