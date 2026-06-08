@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './TrafficSliders.css';
 
-const sliderConfigs = [
+export const sliderConfigs = [
   {
     id: 'events',
     title: 'Monthly Events',
@@ -16,7 +16,7 @@ const sliderConfigs = [
     description: 'Identity-tracked unique users.',
     steps: ['0', '10K', '50K', '100K', '500K'],
     values: ['0', '10K', '50K', '100K', '500K'],
-    initialIndex: 1,
+    initialIndex: 0,
   },
   {
     id: 'api',
@@ -36,8 +36,7 @@ const sliderConfigs = [
   },
 ];
 
-export default function TrafficSliders() {
-  // Manage state for each slider independently
+export default function TrafficSliders({ activePreset, onTrafficChange }) {
   const [sliderValues, setSliderValues] = useState(
     sliderConfigs.reduce((acc, config) => {
       acc[config.id] = config.initialIndex;
@@ -46,8 +45,19 @@ export default function TrafficSliders() {
   );
 
   const handleSliderChange = (id, val) => {
-    setSliderValues((prev) => ({ ...prev, [id]: parseInt(val, 10) }));
-  };
+  const newValues = { ...sliderValues, [id]: parseInt(val, 10) };
+  setSliderValues(newValues);
+
+  if (onTrafficChange) {
+    const mappedValues = Object.entries(newValues).reduce((acc, [key, idx]) => {
+      const slider = sliderConfigs.find(s => s.id === key);
+      acc[key] = { title: slider.title, value: slider.values[idx] };
+      return acc;
+    }, {});
+    onTrafficChange(mappedValues);
+  }
+};
+
 
   return (
     <div className="traffic-container">
@@ -85,7 +95,6 @@ export default function TrafficSliders() {
                     background: `linear-gradient(to right, var(--accent-purple) 0%, var(--accent-purple) ${progressPercent}%, var(--border-outline) ${progressPercent}%, var(--border-outline) 100%)`
                   }}
                 />
-                
                 <div className="slider-steps-labels">
                   {slider.steps.map((step, idx) => (
                     <span 
