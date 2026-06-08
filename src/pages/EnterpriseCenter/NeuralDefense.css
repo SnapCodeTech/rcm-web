@@ -22,11 +22,13 @@
 
 .defense-heading {
     font-family: var(--sans, sans-serif);
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700;
     color: var(--text-primary, #F8FAFC);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
+    line-height: 1.25;
+    word-break: keep-all;
 }
 
 .defense-description {
@@ -427,7 +429,7 @@
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     font-weight: 700;
     color: var(--text-primary, #F8FAFC);
-    line-height: 1.2;
+    line-height: 1.25;
     letter-spacing: -0.01em;
     margin-bottom: 20px;
 }
@@ -854,7 +856,7 @@
     font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: 600;
     color: var(--text-primary, #F8FAFC);
-    line-height: 1;
+    line-height: 1.25;
     letter-spacing: -0.01em;
     margin-bottom: 24px;
 }
@@ -987,6 +989,7 @@
     opacity: 0.9;
     margin-bottom: 20px;
     letter-spacing: -0.01em;
+    line-height: 1.25;
 }
 
 .support-subtitle {

@@ -108,7 +108,7 @@ export default function IntelligenceStack() {
         <section className="stack">
             <div className="stack-container">
                 <div className="stack-header">
-                    <h1>The Integrated Intelligence Stack</h1>
+                    <span className="panel-title">The Integrated Intelligence Stack</span>
                     <p>
                         Ten specialized modules engineered into a single autonomous fabric. Explore the layers of Zelery's core architecture.
                     </p>
