@@ -1,12 +1,10 @@
-import Navbar from "../../components/NavBar/Navbar";
 import EnterpriseHero from "./EnterpriseHero";
 import InsightTabs from "./InsightTabs";
 import NeuralDefense from "./NeuralDefense";
 
-export default function ProjectOverview() {
+export default function EnterpriseCenter() {
     return (
         <div>
-            <Navbar />
             <div style={{}}>
                 <EnterpriseHero />
             </div>
