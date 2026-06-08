@@ -1,0 +1,178 @@
+/* Container Shell Integration */
+.preset-and-summary-container {
+  background-color: var(--pricing-container-bg);
+  color: var(--white);
+  padding: 40px 20px;
+  font-family: var(--sans);
+}
+
+/* Step Badge Number One Alignment */
+.step-badge-one {
+  background-color: #581c87;
+  color: var(--white);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Selected Active Border Highlighter Blueprint */
+.pricing-card.selected-preset {
+  box-shadow: 0 0 0 2px var(--accent-purple), 0 10px 30px rgba(170, 59, 255, 0.15);
+}
+
+/* Check Icons Overrides matching teal glow inside cards */
+.pricing-card .check-icon {
+  color: #06b6d4;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+
+/* ==========================================================================
+   SUMMARY CARD ELEMENT STYLING (image_1ac5f3.png)
+   ========================================================================== */
+
+.summary-wrapper {
+  margin-top: 60px;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summary-panel {
+  background-color: var(--pricing-card-bg);
+  border: 1px solid rgba(192, 132, 252, 0.3); /* Subtle purple perimeter frame glow */
+  border-radius: 16px;
+  padding: 32px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.summary-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  color: var(--text-primary);
+  letter-spacing: -0.2px;
+}
+
+/* Breakdown Rows */
+.summary-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.item-price {
+  font-size: 14px;
+  color: var(--accent-purple);
+  font-weight: 600;
+  font-family: var(--mono);
+}
+
+/* Soft Separation Line */
+.summary-divider {
+  border: none;
+  height: 1px;
+  background-color: var(--border-outline);
+  margin: 24px 0;
+}
+
+/* Total Price Area */
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.total-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.8px;
+  margin-top: 8px;
+}
+
+.total-price-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.total-amount {
+  font-size: 42px;
+  font-weight: 700;
+  color: #e9d5ff; /* soft white-purple bold accent */
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.total-period {
+  font-size: 10px;
+  color: #64748b;
+  font-family: var(--mono);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Action Execution Controls */
+.summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-pay-deploy {
+  width: 100%;
+  background-color: var(--accent-purple);
+  color: #3b0764;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-pay-deploy:hover {
+  background-color: var(--accent-purple-hover);
+  transform: translateY(-1px);
+}
+
+.btn-save-config {
+  width: 100%;
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-outline);
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-save-config:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-color: var(--text-secondary);
+}

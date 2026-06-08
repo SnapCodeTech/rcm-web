@@ -57,7 +57,7 @@
 .step-node {
   width: 50px;
   height: 50px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -68,13 +68,13 @@
   flex-shrink: 0;
 }
 
-/* Margins */
+/* Desktop margins (wide layout) */
 .left-step .step-node {
-  margin: 0px 50px 0px 376px;
+  margin: 0 50px 0 376px;
 }
 
 .right-step .step-node {
-  margin: 0px 376px 0px 50px;
+  margin: 0 376px 0 50px;
 }
 
 .step-content {
@@ -99,4 +99,76 @@
   color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+/* ===========================
+   RESPONSIVE BREAKPOINTS
+   =========================== */
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .roadmap-header h2 {
+    font-size: 2.2rem;
+  }
+  .roadmap-step .step-node {
+    margin: 0 30px;
+  }
+  .step-content {
+    width: 50%;
+  }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .roadmap-timeline::before {
+    left: 20px; /* move line to left side */
+    transform: none;
+  }
+
+  .roadmap-step {
+    flex-direction: row; /* all steps align left */
+    gap: 20px;
+  }
+
+  .step-node {
+    margin: 0;
+  }
+
+  .step-content {
+    width: auto;
+    text-align: left;
+  }
+
+  .roadmap-header h2 {
+    font-size: 2rem;
+  }
+
+  .roadmap-header p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Small mobile (phones <480px) */
+@media (max-width: 480px) {
+  .roadmap-container {
+    padding: 60px 16px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .step-node {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.85rem;
+  }
 }

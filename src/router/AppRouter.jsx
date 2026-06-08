@@ -8,6 +8,8 @@ import Navbar from "../components/Navbar/Navbar"; // Adjust file path to match y
 import Footer from "../components/Footer/Footer";
 import Contact from "../pages/Contact/Contact";
 import UseCases from "../pages/UseCases/UseCases.jsx";
+import Pricing from "../pages/Pricing/Pricing";
+
 // import ContactPage from "../pages/ContactPage";
 
 export default function AppRouter() {
@@ -27,6 +29,7 @@ export default function AppRouter() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/EnterpriseCenter" element={<EnterpriseCenter />} />
             <Route path="/usecases" element={<UseCases />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </main>
         {/* Global Persistent Footer Section */}
@@ -34,4 +37,5 @@ export default function AppRouter() {
       </div>
     </Router>
   );
+
 }
