@@ -1,18 +1,18 @@
-import React from 'react';
-import './GetInTouch.css';
+import React from "react";
+import "./GetInTouch.css";
 
 const GetInTouch = () => {
   return (
     <section className="contact-wrapper">
       {/* Left Text Block */}
       <div className="contact-info">
-        <span className="partner-tag">│ PARTNER WITH ZELERY</span>
+        <span className="partner-tag">│ PARTNER WITH ZELISY</span>
         <h1 className="contact-title">Get in Touch</h1>
         <p className="contact-description">
-          Fuel your engineering velocity with a partnership built on 
-          mission‑critical security and high‑precision observability. 
-          Our solutions architects are ready to design your next 
-          infrastructure evolution.
+          Fuel your engineering velocity with a partnership built on
+          mission‑critical security and high‑precision observability. Our
+          solutions architects are ready to design your next infrastructure
+          evolution.
         </p>
 
         <div className="features-grid">
@@ -20,14 +20,20 @@ const GetInTouch = () => {
             <span className="icon">🛡️</span>
             <div>
               <h3>Secure by Design</h3>
-              <p>Enterprise‑grade encryption and compliance standards embedded in every layer.</p>
+              <p>
+                Enterprise‑grade encryption and compliance standards embedded in
+                every layer.
+              </p>
             </div>
           </div>
           <div className="feature-card">
             <span className="icon">⏱️</span>
             <div>
               <h3>Peak Performance</h3>
-              <p>Real‑time data processing and sub‑millisecond latency for global scale.</p>
+              <p>
+                Real‑time data processing and sub‑millisecond latency for global
+                scale.
+              </p>
             </div>
           </div>
         </div>
@@ -49,7 +55,7 @@ const GetInTouch = () => {
         <div className="form-row">
           <div className="field">
             <label>Company Name</label>
-            <input type="text" placeholder="Zelery AI" />
+            <input type="text" placeholder="Zelisy AI" />
           </div>
           <div className="field">
             <label>Company Size</label>
@@ -64,7 +70,10 @@ const GetInTouch = () => {
 
         <div className="field">
           <label>Message</label>
-          <textarea placeholder="Tell us about your infrastructure goals..." rows="4" />
+          <textarea
+            placeholder="Tell us about your infrastructure goals..."
+            rows="4"
+          />
         </div>
 
         <button type="submit" className="submit-btn">
@@ -76,5 +85,5 @@ const GetInTouch = () => {
       </form>
     </section>
   );
-}
+};
 export default GetInTouch;

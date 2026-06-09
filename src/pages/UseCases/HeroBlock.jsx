@@ -17,9 +17,7 @@ const HeroBlock = () => {
         <div className="hero-glow"></div>
 
         <div className="container hero-content">
-          <div className="hero-badge">
-            Built for Modern Product Teams
-          </div>
+          <div className="hero-badge">Built for Modern Product Teams</div>
 
           <h1 className="hero-title">
             One Platform for the Entire
@@ -27,19 +25,15 @@ const HeroBlock = () => {
           </h1>
 
           <p className="hero-description">
-            From initial canary releases to full-scale experimentation,
-            Zelery gives engineering, product and growth teams the tools
-            they need to ship confidently and scale faster.
+            From initial canary releases to full-scale experimentation, Zelisy
+            gives engineering, product and growth teams the tools they need to
+            ship confidently and scale faster.
           </p>
 
           <div className="hero-buttons">
-            <button className="primary-btn">
-              Start Free
-            </button>
+            <button className="primary-btn">Start Free</button>
 
-            <button className="secondary-btn">
-              Book a Demo
-            </button>
+            <button className="secondary-btn">Book a Demo</button>
           </div>
         </div>
       </section>

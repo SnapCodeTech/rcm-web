@@ -123,7 +123,7 @@ const ProductDeliveryBlock = () => {
 
             <p className="feature-description">
               Don't just release—know exactly how your users interact with new
-              features. Zelery provides deep event-level attribution mapped
+              features. Zelisy provides deep event-level attribution mapped
               directly to feature flags.
             </p>
 

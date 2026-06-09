@@ -46,7 +46,7 @@ const CTAFlowBlock = () => {
         {/* Right Card */}
 
         <div className="comparison-card comparison-card-right">
-          <h3>Zelery Unified Platform</h3>
+          <h3>Zelisy Unified Platform</h3>
 
           <div className="comparison-list">
             <div className="comparison-item positive">
@@ -118,7 +118,7 @@ const CTAFlowBlock = () => {
         <h2 className="section-title">Ready to Ship Faster?</h2>
 
         <p>
-          Join teams using Zelery to release, experiment and grow confidently.
+          Join teams using Zelisy to release, experiment and grow confidently.
         </p>
 
         <div className="hero-buttons">
