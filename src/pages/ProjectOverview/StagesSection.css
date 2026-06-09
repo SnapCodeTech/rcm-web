@@ -53,7 +53,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: space-between;
     width: 100%;
     border-radius: 8px;
     padding: 24px;
@@ -77,6 +77,7 @@
     background: var(--primary);
     transform: translateX(-50%);
     transition: width 0.35s ease;
+    align-items: space-between;
 }
 
 .stageCard:hover {
@@ -100,10 +101,13 @@
 .stageCardInner {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+    height: 100%;
     gap: 24px;
 }
+
 
 .stageIcon svg {
     width: 48px;
@@ -124,6 +128,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    flex: 1;
 }
 
 .stageIcon {
@@ -181,6 +186,7 @@
     object-fit: contain;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     transform-origin: top center;
+    margin-top: auto;
 }
 
 .stageCard:hover .stageConnector {
