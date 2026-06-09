@@ -107,27 +107,60 @@
 
 /* Tablet adjustments */
 @media (max-width: 1024px) {
+  .roadmap-container {
+    padding: 72px 24px;
+  }
+
   .roadmap-header h2 {
     font-size: 2.2rem;
   }
-  .roadmap-step .step-node {
-    margin: 0 30px;
+
+  .roadmap-timeline {
+    gap: 44px;
   }
+
+  .roadmap-timeline::before {
+    left: 24px;
+    transform: none;
+  }
+
+  .roadmap-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding-left: 54px;
+  }
+
+  .right-step {
+    flex-direction: row;
+  }
+
+  .step-node,
+  .left-step .step-node,
+  .right-step .step-node {
+    margin: 0;
+  }
+
   .step-content {
-    width: 50%;
+    width: auto;
+    text-align: left;
   }
 }
 
 /* Mobile layout */
 @media (max-width: 768px) {
+  .roadmap-container {
+    padding: 64px 20px;
+  }
+
   .roadmap-timeline::before {
-    left: 20px; /* move line to left side */
+    left: 18px;
     transform: none;
   }
 
   .roadmap-step {
-    flex-direction: row; /* all steps align left */
-    gap: 20px;
+    gap: 16px;
+    padding-left: 44px;
   }
 
   .step-node {
@@ -151,7 +184,20 @@
 /* Small mobile (phones <480px) */
 @media (max-width: 480px) {
   .roadmap-container {
-    padding: 60px 16px;
+    padding: 56px 16px;
+  }
+
+  .roadmap-timeline {
+    gap: 36px;
+  }
+
+  .roadmap-timeline::before {
+    left: 16px;
+  }
+
+  .roadmap-step {
+    gap: 14px;
+    padding-left: 40px;
   }
 
   .roadmap-header h2 {
@@ -166,6 +212,149 @@
 
   .step-content h3 {
     font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===========================
+   TABLET (≤1024px)
+=========================== */
+@media (max-width: 1024px) {
+
+  .roadmap-container {
+    padding: 70px 24px;
+  }
+
+  .roadmap-header {
+    margin-bottom: 50px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .roadmap-header p {
+    max-width: 600px;
+  }
+
+  .roadmap-timeline {
+    gap: 40px;
+  }
+
+  /* Move line to left */
+  .roadmap-timeline::before {
+    left: 25px;
+    transform: none;
+  }
+
+  .roadmap-step,
+  .right-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .step-node,
+  .left-step .step-node,
+  .right-step .step-node {
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 15px;
+  }
+
+  .step-content,
+  .left-step .step-content,
+  .right-step .step-content {
+    width: 100%;
+    text-align: left;
+  }
+
+  .step-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .step-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ===========================
+   MOBILE (≤768px)
+=========================== */
+@media (max-width: 768px) {
+
+  .roadmap-container {
+    padding: 60px 20px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .roadmap-header p {
+    font-size: 0.95rem;
+  }
+
+  .roadmap-timeline {
+    gap: 35px;
+  }
+
+  .roadmap-timeline::before {
+    left: 20px;
+  }
+
+  .roadmap-step,
+  .right-step {
+    gap: 16px;
+  }
+
+  .step-node {
+    width: 42px;
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+
+/* ===========================
+   SMALL MOBILE (≤480px)
+=========================== */
+@media (max-width: 480px) {
+
+  .roadmap-container {
+    padding: 50px 16px;
+  }
+
+  .roadmap-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .roadmap-timeline::before {
+    left: 18px;
+  }
+
+  .step-node {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .step-content h3 {
+    font-size: 0.95rem;
   }
 
   .step-content p {
