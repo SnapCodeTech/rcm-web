@@ -168,3 +168,51 @@
     height: auto;
   }
 }
+
+
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
+  .incident-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Text comes first */
+  .incident-text-column {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Image comes second */
+  .incident-image-column {
+    order: 2;
+    width: 100%;
+  }
+
+  .incident-image-frame {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .incident-content-grid {
+    gap: 30px;
+  }
+
+  .incident-dashboard-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .incident-feature-title {
+    font-size: 2rem;
+  }
+
+  .incident-feature-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}

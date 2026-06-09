@@ -178,3 +178,24 @@
     height: auto;
   }
 }
+
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
+  .delivery-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Text first */
+  .delivery-text-column {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Image second */
+  .delivery-image-column {
+    order: 2;
+    width: 100%;
+  }
+}
