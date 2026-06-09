@@ -1155,6 +1155,7 @@ margin-top: 60px;
 .comparison-card-right h3 {
   font-size: clamp(2rem, 2.6vw, 3rem);
   margin-bottom: 36px;
+  line-height: 1.1;
 }
 
 .comparison-item {
